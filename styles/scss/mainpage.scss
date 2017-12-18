@@ -22,13 +22,50 @@ body{
     overflow: hidden;
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
     transition: opacity 1s ease;
+    h1{
+      width: 420px;
+      height: auto;
+      position: absolute;
+      top: 100px;
+      left: 100px;
+      font-family: Arial, sans-serif;
+      font-size: 50px;
+      font-weight: bold;
+      color: white;
+    }
+    p{
+      width: 580px;
+      height: auto;
+      position: absolute;
+      top: 300px;
+      left: 100px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      color: white;
+    }
+    img{
+      width: 180px;
+      position: absolute;
+      bottom: 120px;
+      left: 44%;
+    }
     button{
       position: absolute;
-      font-size: 2em;
+      bottom: 80px;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
       width: 100%;
       display: block;
       color: white;
       text-align: center;
+    }
+    .white-line{
+      width: 2px;
+      height: 50px;
+      background: white;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
     }
 .stars {
   width: 1px;

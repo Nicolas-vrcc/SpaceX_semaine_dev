@@ -17,13 +17,46 @@ body {
     overflow: hidden;
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
     transition: opacity 1s ease; }
+    body .home h1 {
+      width: 420px;
+      height: auto;
+      position: absolute;
+      top: 100px;
+      left: 100px;
+      font-family: Arial, sans-serif;
+      font-size: 50px;
+      font-weight: bold;
+      color: white; }
+    body .home p {
+      width: 580px;
+      height: auto;
+      position: absolute;
+      top: 300px;
+      left: 100px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      color: white; }
+    body .home img {
+      width: 180px;
+      position: absolute;
+      bottom: 120px;
+      left: 44%; }
     body .home button {
       position: absolute;
-      font-size: 2em;
+      bottom: 80px;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
       width: 100%;
       display: block;
       color: white;
       text-align: center; }
+    body .home .white-line {
+      width: 2px;
+      height: 50px;
+      background: white;
+      position: absolute;
+      bottom: 0;
+      left: 50%; }
     body .home .stars {
       width: 1px;
       height: 1px;

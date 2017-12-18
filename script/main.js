@@ -14,18 +14,22 @@ startBtn.addEventListener('click', (e) =>{
   homePage.style.display = 'none'
 })
 })
-// mainSlider.addEventListener('click', (e) =>{
-//   console.log('click');
-// })
 
+var jeej = true
+window.addEventListener('scroll', (e) =>{
+  if(jeej){
+    homePage.classList.add('homepagegone')
+  jeej = false
+}
+})
 //handle the animation of the slides
 slideButtons.forEach((button) =>{
-  console.log(button);
   button.addEventListener('click',(e) =>{
+    // remove active from each slide
     for (var i = 0; i < slides.length; i++) {
       slides[i].classList.remove('active')
     }
-    console.log(e.target.dataset.ref)
+    // add active class the slides depending on the corresponding dot clicked
     if(slides[0].classList.contains(e.target.dataset.ref)){
       slides[0].classList.add('active')
     }

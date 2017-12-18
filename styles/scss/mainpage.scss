@@ -6,22 +6,39 @@
     transform: translateY(-2000px);
   }
 }
+@keyframes homepageleave {
+  0%{
 
+  }
+99%{
+  transform: translateY(-100%);
+  opacity: 0.4;
+}
+100%{
+  transform: translateY(-100%);
+  opacity: 0;
+  display: none;
+}
+}
 body{
   position: absolute;
   width: 100%;
   height: 100%;
+  .homepagegone{
+    animation: homepageleave 1s ease;
+    animation-fill-mode:forwards;
+  }
   .home{
     position: absolute;
     display: block;
     width: 100%;
-    height: 100%;
+    // Hack in order to get scroll event still working
+    height: calc(100% + 1px);
     background-color: blue;
     z-index: 1;
-    display: none;
+    // display: none;
     overflow: hidden;
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-    transition: opacity 1s ease;
     h1{
       width: 420px;
       height: auto;

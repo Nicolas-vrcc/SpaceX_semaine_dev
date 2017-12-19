@@ -25,7 +25,8 @@ body {
     height: calc(100% + 1px);
     z-index: 1;
     overflow: hidden;
-    background-image: url(../images/homepage2.png); }
+    background-image: url(../images/homepage.png);
+    background-size: 100%; }
     body .home h1 {
       width: 420px;
       height: auto;

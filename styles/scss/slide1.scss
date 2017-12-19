@@ -2,11 +2,23 @@
   .slide1{
     .maintext{
       position: absolute;
-      width: 30%;
+      width: 500px;
       height: 50%;
-      background-color: lightblue;
       top: 20%;
-      margin: auto;
+      left: calc(50% - 250px);
+      h1{
+        font-family: NexaHeavy;
+        font-size: 2em;
+        color: $blue;
+        margin-bottom: 1em;
+      }
+      p{
+        font-family: NexaLight;
+        margin-bottom: 1em;
+        color: grey;
+        line-height: 1.8em;
+
+      }
 
     }
   }

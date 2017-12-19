@@ -156,7 +156,7 @@ body .slider {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: blue; }
+    background-color: #F8F8F8; }
   body .slider .slide2 {
     position: absolute;
     width: 100%;
@@ -197,10 +197,19 @@ body .slider {
 
 .slider .slide1 .maintext {
   position: absolute;
-  width: 30%;
+  width: 500px;
   height: 50%;
-  background-color: lightblue;
   top: 20%;
-  margin: auto; }
+  left: calc(50% - 250px); }
+  .slider .slide1 .maintext h1 {
+    font-family: NexaHeavy;
+    font-size: 2em;
+    color: #4F91F3;
+    margin-bottom: 1em; }
+  .slider .slide1 .maintext p {
+    font-family: NexaLight;
+    margin-bottom: 1em;
+    color: grey;
+    line-height: 1.8em; }
 
 /*# sourceMappingURL=style.css.map */

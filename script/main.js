@@ -51,8 +51,7 @@ slideButtons.forEach((button) =>{
 
 // make rocket land on scroll on slide3
 let rocketpos = 0
-window.addEventListener('scroll', (e) => {
-  console.log(e);
+window.addEventListener('mousewheel', (e) => {
   if(slide3.classList.contains('active')){
     scrollDownText.style.display = 'none'
     rocketPicture.style.transform = `translateY(${rocketpos}px)`

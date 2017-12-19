@@ -149,7 +149,8 @@ body .slider {
   position: absolute;
   display: block;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  overflow: hidden; }
   body .slider .slide {
     opacity: 0; }
   body .slider .slide1 {
@@ -247,9 +248,9 @@ body .slider {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, black 90%); }
 .slider .slide3 .bfr {
   position: absolute;
-  top: -27em;
+  top: -35em;
   right: 4em;
-  width: 14%;
+  width: 15em;
   height: auto; }
 .slider .slide3 .scroll-down-container {
   position: absolute;

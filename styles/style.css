@@ -205,5 +205,23 @@ body .slider {
   right: 5%;
   width: 14%;
   height: auto; }
+.slider .slide3 .scroll-down-container {
+  position: absolute;
+  top: 15%;
+  right: 8%;
+  width: 8%;
+  height: 20%; }
+  .slider .slide3 .scroll-down-container .dashed {
+    width: 1%;
+    height: 45%;
+    margin: 7% auto;
+    border-left: 1px dashed white;
+    opacity: 0.6; }
+  .slider .slide3 .scroll-down-container .scroll-down {
+    font-family: NexaLight;
+    font-size: 12px;
+    color: white;
+    opacity: 0.6;
+    margin-left: 18%; }
 
 /*# sourceMappingURL=style.css.map */

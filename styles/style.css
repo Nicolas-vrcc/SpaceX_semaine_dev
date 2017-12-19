@@ -271,6 +271,10 @@ body .slider {
     opacity: 0.6;
     margin-left: 18%; }
 
+.slider .slide4 img {
+  position: absolute;
+  bottom: 0;
+  left: 2%; }
 .slider .slide4 .maintext {
   position: absolute;
   width: 500px;

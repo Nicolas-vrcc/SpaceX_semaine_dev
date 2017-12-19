@@ -34,11 +34,12 @@ body{
     width: 100%;
     // Hack in order to get scroll event still working
     height: calc(100% + 1px);
-    background-color: blue;
+    // background-color: blue;
     z-index: 1;
     // display: none;
     overflow: hidden;
-    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    background-image: url(../images/homepage2.png);
+    // background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
     h1{
       width: 420px;
       height: auto;
@@ -63,7 +64,7 @@ body{
     img{
       width: 180px;
       position: absolute;
-      bottom: 120px;
+      bottom: 100px;
       left: 44%;
     }
     button{

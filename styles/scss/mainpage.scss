@@ -34,11 +34,10 @@ body{
     width: 100%;
     // Hack in order to get scroll event still working
     height: calc(100% + 1px);
-    // background-color: blue;
     z-index: 1;
-    // display: none;
+    display: none;
     overflow: hidden;
-    background-image: url(../images/homepage.png);
+    background-image: url(../images/bck.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-clip: border-box;
@@ -46,7 +45,7 @@ body{
       font-family: NexaHeavy;
       height: auto;
       position: absolute;
-      top: 30%;
+      top: 25%;
       left: 10%;
       font-size: 3.5em;
       font-weight: bold;
@@ -70,13 +69,14 @@ body{
     }
     p{
       font-family: NexaLight;
-      width: 580px;
+      width: 30em;
       height: auto;
       position: absolute;
-      top: 60%;
+      top: 55%;
       left: 10%;
       font-size: 0.9em;
       color: white;
+      line-height: 1.8em;
     }
     img{
       width: 180px;

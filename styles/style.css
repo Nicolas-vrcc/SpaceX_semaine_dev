@@ -30,8 +30,9 @@ body {
     width: 100%;
     height: calc(100% + 1px);
     z-index: 1;
+    display: none;
     overflow: hidden;
-    background-image: url(../images/homepage.png);
+    background-image: url(../images/bck.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-clip: border-box; }
@@ -39,7 +40,7 @@ body {
       font-family: NexaHeavy;
       height: auto;
       position: absolute;
-      top: 30%;
+      top: 25%;
       left: 10%;
       font-size: 3.5em;
       font-weight: bold;
@@ -58,13 +59,14 @@ body {
         width: 3em; }
     body .home p {
       font-family: NexaLight;
-      width: 580px;
+      width: 30em;
       height: auto;
       position: absolute;
-      top: 60%;
+      top: 55%;
       left: 10%;
       font-size: 0.9em;
-      color: white; }
+      color: white;
+      line-height: 1.8em; }
     body .home img {
       width: 180px;
       position: absolute;
@@ -154,7 +156,7 @@ body .slider {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: blue; }
+    background-color: #F8F8F8; }
   body .slider .slide2 {
     position: absolute;
     width: 100%;
@@ -192,6 +194,23 @@ body .slider {
     animation: display 1s ease;
     animation-fill-mode: forwards;
     animation-direction: reverse; }
+
+.slider .slide1 .maintext {
+  position: absolute;
+  width: 500px;
+  height: 50%;
+  top: 20%;
+  left: calc(50% - 250px); }
+  .slider .slide1 .maintext h1 {
+    font-family: NexaHeavy;
+    font-size: 2em;
+    color: #4F91F3;
+    margin-bottom: 1em; }
+  .slider .slide1 .maintext p {
+    font-family: NexaLight;
+    margin-bottom: 1em;
+    color: grey;
+    line-height: 1.8em; }
 
 .slider .slide3 .mars {
   position: absolute;

@@ -22,14 +22,14 @@ startBtn.addEventListener('click', (e) => {
 
 // display and hide homepage on mousewheel up or down
 window.addEventListener('mousewheel', (e) => {
-  if(slides[0].classList.contains('active')){
-  if (e.wheelDeltaY < 0) {
-    homePage.classList.add('homepagegone')
+  if (slides[0].classList.contains('active')) {
+    if (e.wheelDeltaY < 0) {
+      homePage.classList.add('homepagegone')
+    }
+    if (e.wheelDeltaY > 0) {
+      homePage.classList.remove('homepagegone')
+    }
   }
-  if (e.wheelDeltaY > 0) {
-    homePage.classList.remove('homepagegone')
-  }
-}
 })
 
 //handle the animation of the slides
@@ -62,9 +62,13 @@ let rotateleg1 = -30
 let rotateleg2 = 30
 window.addEventListener('mousewheel', (e) => {
   if (slide3.classList.contains('active')) {
-    scrollDownText.style.display = 'none'
+    if (rocketpos <= 0) {
+      scrollDownText.style.opacity = '1'
+    } else {
+      scrollDownText.style.opacity = '0'
+    }
 
-// Checking if the user scroll up or down
+    // Checking if the user scroll up or down
     if (e.wheelDelta >= 0) {
       if (rocketpos >= 0) {
         // Moving up the rocket position

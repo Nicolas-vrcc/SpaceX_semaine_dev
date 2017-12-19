@@ -58,17 +58,42 @@ body{
     position: absolute;
     display: flex;
     align-items: center;
-    justify-content:space-between;
+    justify-content:space-around;
     top: 85%;
     left: calc(25% - 25px);
     width: 50%;
     height: 100px;
     .circle{
-      width: 20px;
-      height: 20px;
+      width: 15px;
+      height: 15px;
       border-radius: 100%;
-      background-color: lightgrey;
+      border: 2px solid lightgrey;
       cursor: pointer;
+    }
+    .decorationcircle{
+      width: 10px;
+      height: 10px;
+      background-color: lightgrey;
+      border-radius: 100%;
+    }
+    .separationrect{
+      width: 100px;
+      height: 3px;
+      background-color: lightgrey;
+    }
+    .clickedbtn{
+      border: 2px solid grey;
+      background-color: grey;
+      &:before{
+        position: absolute;
+        margin-top: -10px;
+        margin-left: -10px;
+        content: '';
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        border: 2px solid $blue;
+      }
     }
   }
   .active{

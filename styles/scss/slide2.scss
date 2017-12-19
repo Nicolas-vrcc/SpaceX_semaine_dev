@@ -1,8 +1,38 @@
 .slider{
   .slide2{
+    .maintext{
+      position: absolute;
+      width: 550px;
+      height: 50%;
+      top: 20%;
+      left: calc(50% - 275px);
+    }
     h1{
-      font-size: 20px;
-      color: blue;
+      font-family: NexaHeavy;
+      font-size: 3em;
+      color: $blue;
+      margin-bottom: 1em;
+    }
+    p{
+      font-family: NexaLight;
+      margin-bottom: 1em;
+      color: grey;
+      line-height: 1.8em;
+    }
+    .engine{
+      position: absolute;
+      transform: scale(0.55) rotate(-19deg);
+      top: -53%;
+      left: -28%;
+    }
+    .thermo{
+      position: absolute;
+      top: 8%;
+      left: 65%;
+      transform: rotate(8deg);
+    }
+    .bold-text{
+      font-weight: 900;
     }
   }
 }

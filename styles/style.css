@@ -127,7 +127,7 @@ body {
 @keyframes display {
   0% {
     opacity: 0;
-    filter: blur(100px); }
+    filter: blur(50px); }
   100% {
     opacity: 1;
     filter: blur(0px); } }
@@ -155,7 +155,7 @@ body .slider {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: pink; }
+    background-color: #F8F8F8; }
   body .slider .slide3 {
     position: absolute;
     width: 100%;
@@ -182,10 +182,10 @@ body .slider {
       background-color: lightgrey;
       cursor: pointer; }
   body .slider .active {
-    animation: display 1s ease;
+    animation: display 0.8s ease;
     animation-fill-mode: forwards; }
   body .slider .hide {
-    animation: display 1s ease;
+    animation: display 0.8s ease;
     animation-fill-mode: forwards;
     animation-direction: reverse; }
 
@@ -206,9 +206,34 @@ body .slider {
     color: grey;
     line-height: 1.8em; }
 
+.slider .slide2 .maintext {
+  position: absolute;
+  width: 550px;
+  height: 50%;
+  top: 20%;
+  left: calc(50% - 275px); }
 .slider .slide2 h1 {
-  font-size: 20px;
-  color: blue; }
+  font-family: NexaHeavy;
+  font-size: 3em;
+  color: #4F91F3;
+  margin-bottom: 1em; }
+.slider .slide2 p {
+  font-family: NexaLight;
+  margin-bottom: 1em;
+  color: grey;
+  line-height: 1.8em; }
+.slider .slide2 .engine {
+  position: absolute;
+  transform: scale(0.55) rotate(-19deg);
+  top: -53%;
+  left: -28%; }
+.slider .slide2 .thermo {
+  position: absolute;
+  top: 8%;
+  left: 65%;
+  transform: rotate(8deg); }
+.slider .slide2 .bold-text {
+  font-weight: 900; }
 
 .slider .slide3 .mars {
   position: absolute;

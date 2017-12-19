@@ -171,7 +171,7 @@ body .slider {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: yellow; }
+    background-color: black; }
   body .slider .slidermenu {
     position: absolute;
     display: flex;
@@ -270,5 +270,22 @@ body .slider {
     color: white;
     opacity: 0.6;
     margin-left: 18%; }
+
+.slider .slide4 .maintext {
+  position: absolute;
+  width: 500px;
+  height: 50%;
+  top: 20%;
+  left: calc(50% - 250px); }
+  .slider .slide4 .maintext h1 {
+    font-family: NexaHeavy;
+    font-size: 2em;
+    color: #4F91F3;
+    margin-bottom: 1em; }
+  .slider .slide4 .maintext p {
+    font-family: NexaLight;
+    margin-bottom: 1em;
+    color: grey;
+    line-height: 1.8em; }
 
 /*# sourceMappingURL=style.css.map */

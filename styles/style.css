@@ -23,10 +23,9 @@ body {
     display: block;
     width: 100%;
     height: calc(100% + 1px);
-    background-color: blue;
     z-index: 1;
     overflow: hidden;
-    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%); }
+    background-image: url(../images/homepage2.png); }
     body .home h1 {
       width: 420px;
       height: auto;
@@ -49,7 +48,7 @@ body {
     body .home img {
       width: 180px;
       position: absolute;
-      bottom: 120px;
+      bottom: 100px;
       left: 44%; }
     body .home button {
       position: absolute;

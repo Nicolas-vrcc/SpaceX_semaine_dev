@@ -4,6 +4,9 @@ const startBtn = homePage.querySelector('.startbtn')
 const mainSlider = document.querySelector('.slider')
 const slides = document.querySelectorAll('.slide')
 const slideButtons = document.querySelectorAll('.circle')
+const slide3 = document.querySelector('.slide3')
+const scrollDownText = slide3.querySelector('.scroll-down-container')
+const bfr = slide3.querySelector('.bfr')
 
 
 // event listeners
@@ -43,4 +46,13 @@ slideButtons.forEach((button) =>{
       slides[3].classList.add('active')
     }
   })
+})
+
+let scrolled = false
+window.addEventListener('scroll', (e) => {
+  if(slide3.classList.contains('active') && scrolled == false){
+    scrollDownText.style.display = 'none'
+    bfr.classList.add('bfr-up')
+    scrolled = true
+  }
 })

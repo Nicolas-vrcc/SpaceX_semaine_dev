@@ -1,3 +1,13 @@
+@keyframes bfrdown {
+  0% {
+    transform: translateY(0)
+  }
+
+  100% {
+    transform: translateY(70%)
+  }
+}
+
 .slider{
   .slide3{
     .mars{
@@ -25,7 +35,11 @@
         color: grey;
         line-height: 1.8em;
       }
-    } 
+    }
+    .bfr-up{
+      animation: bfrdown 1s ease;
+      animation-fill-mode:forwards;
+    }
     .bfr{
       position: absolute;
       top: -65%;

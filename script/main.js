@@ -18,14 +18,18 @@ startBtn.addEventListener('click', (e) =>{
 })
 })
 
-var homepageup = false
-window.addEventListener('scroll', (e) =>{
-  console.log(e);
-  if(!homepageup){
+// display and hide homepage on mousewheel up or down
+window.addEventListener('mousewheel', (e) => {
+  if(slides[0].classList.contains('active')){
+  if (e.wheelDeltaY < 0) {
     homePage.classList.add('homepagegone')
-  homepageup = true
+  }
+  if (e.wheelDeltaY > 0) {
+    homePage.classList.remove('homepagegone')
+  }
 }
 })
+
 //handle the animation of the slides
 slideButtons.forEach((button) =>{
   button.addEventListener('click',(e) =>{

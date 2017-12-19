@@ -4,9 +4,12 @@ const startBtn = homePage.querySelector('.startbtn')
 const mainSlider = document.querySelector('.slider')
 const slides = document.querySelectorAll('.slide')
 const slideButtons = document.querySelectorAll('.circle')
+<<<<<<< HEAD
 const slide3 = document.querySelector('.slide3')
 const scrollDownText = slide3.querySelector('.scroll-down-container')
 const rocketPicture = slide3.querySelector('.bfr')
+=======
+>>>>>>> parent of e89867e... add animation
 
 
 // event listeners
@@ -48,6 +51,7 @@ slideButtons.forEach((button) =>{
     }
   })
 })
+<<<<<<< HEAD
 
 // make rocket land on scroll on slide3
 let rocketpos = 0
@@ -59,3 +63,5 @@ window.addEventListener('scroll', (e) => {
     rocketpos += 10
   }
 })
+=======
+>>>>>>> parent of e89867e... add animation

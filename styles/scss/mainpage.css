@@ -1,9 +1,3 @@
-@font-face {
-  font-family: NexaHeavy;
-  src: url(../fonts/NexaHeavy.otf); }
-@font-face {
-  font-family: NexaLight;
-  src: url(../fonts/NexaLight.otf); }
 @keyframes animStar {
   from {
     transform: translateY(0px); }
@@ -30,43 +24,29 @@ body {
     width: 100%;
     height: calc(100% + 1px);
     z-index: 1;
-    display: none;
     overflow: hidden;
-    background-image: url(../images/bck.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-clip: border-box; }
+    background-image: url(../images/homepage.png);
+    background-size: 100%; }
     body .home h1 {
       font-family: NexaHeavy;
+      width: 420px;
       height: auto;
       position: absolute;
-      top: 25%;
-      left: 10%;
-      font-size: 3.5em;
+      top: 100px;
+      left: 100px;
+      font-size: 50px;
       font-weight: bold;
       color: white; }
-      body .home h1 b:before {
-        position: absolute;
-        top: 2.5em;
-        content: '';
-        display: block;
-        height: 0.5em;
-        width: 2em;
-        background-color: #4F91F3;
-        transition: width 0.5s ease;
-        z-index: -1; }
-      body .home h1 b:hover:before {
-        width: 3em; }
     body .home p {
-      font-family: NexaLight;
-      width: 30em;
+      font-family: Nexa-Light;
+      width: 580px;
       height: auto;
       position: absolute;
-      top: 55%;
-      left: 10%;
-      font-size: 0.9em;
-      color: white;
-      line-height: 1.8em; }
+      top: 300px;
+      left: 100px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      color: white; }
     body .home img {
       width: 180px;
       position: absolute;
@@ -131,152 +111,4 @@ body {
       background: transparent;
       box-shadow: 418px 409px #FFF , 288px 487px #FFF , 636px 1161px #FFF , 357px 1381px #FFF , 355px 1514px #FFF , 1337px 1310px #FFF , 741px 1995px #FFF , 1926px 1812px #FFF , 897px 1687px #FFF , 1269px 353px #FFF , 1468px 1857px #FFF , 634px 589px #FFF , 1987px 47px #FFF , 1066px 805px #FFF , 905px 1655px #FFF , 1880px 1887px #FFF , 1297px 1730px #FFF , 1574px 26px #FFF , 1787px 1378px #FFF , 790px 578px #FFF , 1973px 928px #FFF , 391px 1815px #FFF , 791px 1991px #FFF , 394px 1650px #FFF , 1663px 305px #FFF , 438px 888px #FFF , 1073px 790px #FFF , 1601px 512px #FFF , 1379px 159px #FFF , 1468px 1927px #FFF , 124px 1236px #FFF , 1647px 169px #FFF , 1078px 794px #FFF , 1741px 537px #FFF , 529px 897px #FFF , 1485px 618px #FFF , 1469px 834px #FFF , 811px 593px #FFF , 1572px 1974px #FFF , 717px 919px #FFF , 453px 350px #FFF , 925px 936px #FFF , 191px 1307px #FFF , 1590px 1046px #FFF , 178px 123px #FFF , 1229px 460px #FFF , 1225px 802px #FFF , 244px 459px #FFF , 1082px 601px #FFF , 1744px 726px #FFF , 1110px 1646px #FFF , 1701px 89px #FFF , 314px 1630px #FFF , 1371px 1593px #FFF , 467px 55px #FFF , 1146px 1215px #FFF , 572px 853px #FFF , 384px 1352px #FFF , 762px 1697px #FFF , 652px 1950px #FFF , 1213px 460px #FFF , 402px 648px #FFF , 714px 1254px #FFF , 1984px 816px #FFF , 961px 66px #FFF , 1317px 637px #FFF , 1029px 1048px #FFF , 1767px 1381px #FFF , 161px 1153px #FFF , 1056px 385px #FFF , 452px 1177px #FFF , 901px 1129px #FFF , 882px 1381px #FFF , 228px 1260px #FFF , 1403px 626px #FFF , 1654px 345px #FFF , 372px 89px #FFF , 1445px 409px #FFF , 361px 1365px #FFF , 578px 1993px #FFF , 213px 286px #FFF , 1488px 1489px #FFF , 1926px 475px #FFF , 1013px 942px #FFF , 1247px 1021px #FFF , 1409px 1700px #FFF , 84px 1483px #FFF , 906px 798px #FFF , 1130px 1396px #FFF , 224px 1115px #FFF , 1204px 1622px #FFF , 1632px 1686px #FFF , 1417px 192px #FFF , 1794px 1032px #FFF , 1144px 1030px #FFF , 644px 250px #FFF , 1569px 1092px #FFF , 1517px 858px #FFF , 739px 997px #FFF , 1406px 81px #FFF; }
 
-@keyframes display {
-  0% {
-    opacity: 0;
-    filter: blur(100px); }
-  100% {
-    opacity: 1;
-    filter: blur(0px); } }
-@keyframes hide {
-  0% {
-    opacity: 1;
-    filter: blur(0px); }
-  100% {
-    opacity: 0;
-    filter: blur(100px); } }
-body .slider {
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 100%; }
-  body .slider .slide {
-    opacity: 0; }
-  body .slider .slide1 {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #F8F8F8; }
-  body .slider .slide2 {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: pink; }
-  body .slider .slide3 {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: black; }
-  body .slider .slide4 {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: yellow; }
-  body .slider .slidermenu {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    top: 85%;
-    left: calc(25% - 25px);
-    width: 50%;
-    height: 100px; }
-    body .slider .slidermenu .circle {
-      width: 20px;
-      height: 20px;
-      border-radius: 100%;
-      background-color: lightgrey;
-      cursor: pointer; }
-  body .slider .active {
-    animation: display 1s ease;
-    animation-fill-mode: forwards; }
-  body .slider .hide {
-    animation: display 1s ease;
-    animation-fill-mode: forwards;
-    animation-direction: reverse; }
-
-.slider .slide1 .maintext {
-  position: absolute;
-  width: 500px;
-  height: 50%;
-  top: 20%;
-  left: calc(50% - 250px); }
-  .slider .slide1 .maintext h1 {
-    font-family: NexaHeavy;
-    font-size: 2em;
-    color: #4F91F3;
-    margin-bottom: 1em; }
-  .slider .slide1 .maintext p {
-    font-family: NexaLight;
-    margin-bottom: 1em;
-    color: grey;
-    line-height: 1.8em; }
-
-.slider .slide2 h1 {
-  font-size: 20px;
-  color: blue; }
-
-@keyframes bfrdown {
-  0% {
-    transform: translateY(0); }
-  100% {
-    transform: translateY(70%); } }
-.slider .slide3 .mars {
-  position: absolute;
-  top: 20%;
-  left: -20%;
-  width: 40%;
-  height: auto; }
-.slider .slide3 .maintext {
-  position: absolute;
-  width: 500px;
-  height: 50%;
-  top: 20%;
-  left: calc(50% - 250px); }
-  .slider .slide3 .maintext h1 {
-    font-family: NexaHeavy;
-    font-size: 2em;
-    color: #4F91F3;
-    margin-bottom: 1em; }
-  .slider .slide3 .maintext p {
-    font-family: NexaLight;
-    margin-bottom: 1em;
-    color: grey;
-    line-height: 1.8em; }
-  .slider .slide3 .maintext .shadow {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 30%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, black 90%); }
-.slider .slide3 .bfr-up {
-  animation: bfrdown 1s ease;
-  animation-fill-mode: forwards; }
-.slider .slide3 .bfr {
-  position: absolute;
-  top: -65%;
-  right: 5%;
-  width: 14%;
-  height: auto; }
-.slider .slide3 .scroll-down-container {
-  position: absolute;
-  display: block;
-  top: 15%;
-  right: 8%;
-  width: 8%;
-  height: 20%; }
-  .slider .slide3 .scroll-down-container .dashed {
-    width: 1%;
-    height: 45%;
-    margin: 7% auto;
-    border-left: 1px dashed white;
-    opacity: 0.6; }
-  .slider .slide3 .scroll-down-container .scroll-down {
-    font-family: NexaLight;
-    font-size: 12px;
-    color: white;
-    opacity: 0.6;
-    margin-left: 18%; }
-
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=mainpage.css.map */

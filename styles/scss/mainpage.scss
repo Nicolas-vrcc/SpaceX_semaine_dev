@@ -38,7 +38,8 @@ body{
     z-index: 1;
     // display: none;
     overflow: hidden;
-    background-image: url(../images/homepage2.png);
+    background-image: url(../images/homepage.png);
+    background-size: 100%;
     // background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
     h1{
       font-family: NexaHeavy;
@@ -65,8 +66,8 @@ body{
     img{
       width: 180px;
       position: absolute;
-      bottom: 100px;
-      left: 44%;
+      bottom: 50px;
+      right: 60px;
     }
     button{
       position: absolute;

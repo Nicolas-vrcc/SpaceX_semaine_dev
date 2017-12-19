@@ -15,11 +15,11 @@ startBtn.addEventListener('click', (e) =>{
 })
 })
 
-var jeej = true
+var homepageup = false
 window.addEventListener('scroll', (e) =>{
-  if(jeej){
+  if(!homepageup){
     homePage.classList.add('homepagegone')
-  jeej = false
+  homepageup = true
 }
 })
 //handle the animation of the slides

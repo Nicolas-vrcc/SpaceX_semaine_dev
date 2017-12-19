@@ -9,6 +9,8 @@ const scrollDownText = slide3.querySelector('.scroll-down-container')
 const rocketPicture = slide3.querySelector('.bfr')
 const rocketLeg1 = slide3.querySelector('.leg1')
 const rocketLeg2 = slide3.querySelector('.leg2')
+const textMissions = slide3.querySelectorAll('.text-missions')
+const textMissions2 = slide3.querySelectorAll('.text-missions2')
 
 
 // event listeners
@@ -65,6 +67,7 @@ let rocketpos = 0
 let legpos = 0
 let rotateleg1 = -30
 let rotateleg2 = 30
+let textpos = 0
 window.addEventListener('mousewheel', (e) => {
   if (slide3.classList.contains('active')) {
     if (rocketpos <= 0) {
@@ -98,6 +101,19 @@ window.addEventListener('mousewheel', (e) => {
           rocketLeg2.style.transform = `translateY(${legpos}px) rotate(30deg)`
         }
       }
+      // Moving up the text
+      for (const textMission of textMissions) {
+        if (textpos >= 0) {
+          textpos -= 20
+          textMission.style.transform = `translateY(${textpos}px)`
+          // Second text disappearing if the first is up
+          if (textpos <= 220) {
+            for(const textMission2 of textMissions2) {
+              textMission2.style.opacity = '0'
+            }
+          }
+        }
+      }
     } else {
       if (rocketpos <= 390) {
         // Moving down the rocket position
@@ -120,6 +136,20 @@ window.addEventListener('mousewheel', (e) => {
         } else {
           rocketLeg1.style.transform = `translateY(${legpos}px) rotate(-30deg)`
           rocketLeg2.style.transform = `translateY(${legpos}px) rotate(30deg)`
+        }
+      }
+      // Moving down the text
+      for (const textMission of textMissions) {
+        console.log(textpos)
+        if (textpos <= 300) {
+          textpos += 20
+          textMission.style.transform = `translateY(${textpos}px)`          
+          // Second text appearing if the first is down
+          if (textpos >= 220) {
+            for(const textMission2 of textMissions2) {
+              textMission2.style.opacity = '1'
+            }
+          }
         }
       }
     }

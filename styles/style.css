@@ -1,3 +1,9 @@
+@font-face {
+  font-family: NexaHeavy;
+  src: url(../fonts/NexaHeavy.otf); }
+@font-face {
+  font-family: Nexa-Light;
+  src: url(../fonts/Nexa-Light.otf); }
 @keyframes animStar {
   from {
     transform: translateY(0px); }
@@ -27,16 +33,17 @@ body {
     overflow: hidden;
     background-image: url(../images/homepage2.png); }
     body .home h1 {
+      font-family: NexaHeavy;
       width: 420px;
       height: auto;
       position: absolute;
       top: 100px;
       left: 100px;
-      font-family: Arial, sans-serif;
       font-size: 50px;
       font-weight: bold;
       color: white; }
     body .home p {
+      font-family: Nexa-Light;
       width: 580px;
       height: auto;
       position: absolute;

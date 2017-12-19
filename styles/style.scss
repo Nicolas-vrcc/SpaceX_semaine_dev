@@ -1,2 +1,14 @@
+// fonts
+@font-face {
+    font-family: NexaHeavy;
+    src: url(../fonts/NexaHeavy.otf);
+}
+@font-face {
+    font-family: Nexa-Light;
+    src: url(../fonts/Nexa-Light.otf);
+}
+
+
 @import 'scss/mainpage.scss';
 @import 'scss/slider.scss';
+@import 'scss/slide1.scss';

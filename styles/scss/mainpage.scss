@@ -41,17 +41,18 @@ body{
     background-image: url(../images/homepage2.png);
     // background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
     h1{
+      font-family: NexaHeavy;
       width: 420px;
       height: auto;
       position: absolute;
       top: 100px;
       left: 100px;
-      font-family: Arial, sans-serif;
       font-size: 50px;
       font-weight: bold;
       color: white;
     }
     p{
+      font-family: Nexa-Light;
       width: 580px;
       height: auto;
       position: absolute;

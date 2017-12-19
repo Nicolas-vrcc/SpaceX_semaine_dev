@@ -6,7 +6,7 @@ const slides = document.querySelectorAll('.slide')
 const slideButtons = document.querySelectorAll('.circle')
 const slide3 = document.querySelector('.slide3')
 const scrollDownText = slide3.querySelector('.scroll-down-container')
-const bfr = slide3.querySelector('.bfr')
+const rocketPicture = slide3.querySelector('.bfr')
 
 
 // event listeners
@@ -20,6 +20,7 @@ startBtn.addEventListener('click', (e) =>{
 
 var homepageup = false
 window.addEventListener('scroll', (e) =>{
+  console.log(e);
   if(!homepageup){
     homePage.classList.add('homepagegone')
   homepageup = true
@@ -48,11 +49,13 @@ slideButtons.forEach((button) =>{
   })
 })
 
-let scrolled = false
+// make rocket land on scroll on slide3
+let rocketpos = 0
 window.addEventListener('scroll', (e) => {
-  if(slide3.classList.contains('active') && scrolled == false){
+  console.log(e);
+  if(slide3.classList.contains('active')){
     scrollDownText.style.display = 'none'
-    bfr.classList.add('bfr-up')
-    scrolled = true
+    rocketPicture.style.transform = `translateY(${rocketpos}px)`
+    rocketpos += 10
   }
 })

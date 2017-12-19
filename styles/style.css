@@ -1,22 +1,22 @@
 /*
 Error: Invalid CSS after "<<<<<<< HEAD": expected "{", was "}"
-        on line 29 of /Users/nicolas/Desktop/SPACEX/SpaceX_semaine_dev/styles/scss/slide3.scss
+        on line 30 of /Users/nicolas/Desktop/SPACEX/SpaceX_semaine_dev/styles/scss/slide3.scss
         from line 18 of /Users/nicolas/Desktop/SPACEX/SpaceX_semaine_dev/styles/style.scss
 
-24:         margin-bottom: 1em;
 25:         color: grey;
 26:         line-height: 1.8em;
 27:       }
 28: <<<<<<< HEAD
-29:     }
-30: =======
-31:     } 
-32: >>>>>>> parent of e89867e... add animation
-33:     .bfr{
-34:       position: absolute;
+29: <<<<<<< HEAD
+30:     }
+31: =======
+32:     } 
+33: >>>>>>> parent of e89867e... add animation
+34: =======
+35:     } 
 
 Backtrace:
-/Users/nicolas/Desktop/SPACEX/SpaceX_semaine_dev/styles/scss/slide3.scss:29
+/Users/nicolas/Desktop/SPACEX/SpaceX_semaine_dev/styles/scss/slide3.scss:30
 /Users/nicolas/Desktop/SPACEX/SpaceX_semaine_dev/styles/style.scss:18
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:1207:in `expected'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:1137:in `expected'
@@ -78,4 +78,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"<<<<<<< HEAD\": expected \"{\", was \"}\"\A         on line 29 of /Users/nicolas/Desktop/SPACEX/SpaceX_semaine_dev/styles/scss/slide3.scss\A         from line 18 of /Users/nicolas/Desktop/SPACEX/SpaceX_semaine_dev/styles/style.scss\A \A 24:         margin-bottom: 1em;\A 25:         color: grey;\A 26:         line-height: 1.8em;\A 27:       }\A 28: <<<<<<< HEAD\A 29:     }\A 30: =======\A 31:     } \A 32: >>>>>>> parent of e89867e... add animation\A 33:     .bfr{\A 34:       position: absolute;"; }
+  content: "Error: Invalid CSS after \"<<<<<<< HEAD\": expected \"{\", was \"}\"\A         on line 30 of /Users/nicolas/Desktop/SPACEX/SpaceX_semaine_dev/styles/scss/slide3.scss\A         from line 18 of /Users/nicolas/Desktop/SPACEX/SpaceX_semaine_dev/styles/style.scss\A \A 25:         color: grey;\A 26:         line-height: 1.8em;\A 27:       }\A 28: <<<<<<< HEAD\A 29: <<<<<<< HEAD\A 30:     }\A 31: =======\A 32:     } \A 33: >>>>>>> parent of e89867e... add animation\A 34: =======\A 35:     } "; }

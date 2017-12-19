@@ -36,16 +36,36 @@
     }
     .bfr{
       position: absolute;
-      top: -35em;
+      top: -27em;
       right: 4em;
-      width: 15em;
+      width: 12em;
       height: auto;
+      z-index: 3;
+      transition: transform 0.1s ease;
+    }
+    .leg{
+      width: 4em;
+      height: auto;
+      position: absolute;
+      top: -0.5em;
+      display: block;
+      z-index: 2;
+    }
+    .leg1{
+      right: 9em;
+      transform: rotate(-30deg);
+      transition: transform 0.1s ease;
+    }
+    .leg2{
+      right: 7em;
+      transform: rotate(30deg);
+      transition: transform 0.1s ease;
     }
     .scroll-down-container{
       position: absolute;
       display: block;
-      top: 15%;
-      right: 8%;
+      top: 5em;
+      right: 6.7em;
       width: 8%;
       height: 20%;
       .dashed{

@@ -247,8 +247,8 @@ body .slider {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, black 90%); }
 .slider .slide3 .bfr {
   position: absolute;
-  top: -65%;
-  right: 5%;
+  top: -27em;
+  right: 4em;
   width: 14%;
   height: auto; }
 .slider .slide3 .scroll-down-container {

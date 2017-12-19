@@ -207,6 +207,7 @@ body .slider {
   height: auto; }
 .slider .slide3 .scroll-down-container {
   position: absolute;
+  display: block;
   top: 15%;
   right: 8%;
   width: 8%;

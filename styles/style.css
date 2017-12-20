@@ -330,11 +330,11 @@ body .slider .slide1 {
       color: grey;
       line-height: 1.8em; }
   .slider .slide2 .thermo {
-    width: 45em;
+    width: 8em;
     height: auto;
     position: absolute;
-    top: 1em;
-    right: -15em;
+    top: 10%;
+    right: 10%;
     transform: rotate(8deg);
     pointer-events: none; }
   .slider .slide2 .bold-text {
@@ -350,12 +350,13 @@ body .slider .slide1 {
     cursor: pointer; }
   .slider .slide2 .progressbar {
     position: absolute;
-    top: 80%;
-    right: 10%;
+    top: 75%;
+    right: calc(15% - 5px);
     width: 50px;
     height: 50px;
     background-color: #4F91F3;
-    transform-origin: bottom; }
+    transform-origin: bottom;
+    z-index: -1; }
 
 @media (max-width: 800px) {
   body .slider .slide2 .maintext h1 {

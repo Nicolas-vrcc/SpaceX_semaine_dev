@@ -29,11 +29,11 @@
       }
     }
     .thermo{
-      width: 45em;
+      width: 8em;
       height: auto;
       position: absolute;
-      top: 1em;
-      right: -15em;
+      top: 10%;
+      right: 10%;
       transform: rotate(8deg);
       pointer-events: none;
     }
@@ -52,12 +52,13 @@
     }
     .progressbar{
     position: absolute;
-    top: 80%;
-    right: 10%;
+    top: 75%;
+    right: calc(15% - 5px);
     width: 50px;
     height: 50px;
     background-color: $blue;
     transform-origin: bottom;
+    z-index: -1;
     // transition: transform 0.1s ease;
     }
   }

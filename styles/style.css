@@ -67,7 +67,6 @@ body {
     width: 100%;
     height: calc(100% + 1px);
     z-index: 8;
-    display: none;
     overflow: hidden;
     background-image: url(../images/bck.png);
     background-size: cover;

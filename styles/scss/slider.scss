@@ -1,7 +1,7 @@
 @keyframes display {
   0%{
     opacity: 0;
-    filter: blur(50px);
+    filter: blur(40px);
   }
   100%{
     opacity: 1;
@@ -15,7 +15,7 @@
   }
   100%{
     opacity: 0;
-    filter: blur(100px);
+    filter: blur(40px);
   }
 }
 

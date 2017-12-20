@@ -55,6 +55,11 @@ body {
           transition: opacity 0.8s ease-in;
         }
       }
+      .parallax1{
+        .layer1{
+          margin-top: 15%;
+        }
+      }
     }
   }
 }
@@ -65,7 +70,7 @@ body {
       .slide1 {
         .maintext {
           h1 {
-            margin-top: 2em;            
+            margin-top: 2em;
             margin-bottom: 2em;
           }
           p {

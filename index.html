@@ -41,12 +41,14 @@
           Mars can only last 39 days if the conditions are ideal. Passengers will be transported by the Colonial Martian
           Transporter (or "Big Fucking Rocket").
         </p>
+      </div>
         <div class="links">
           <a href="http://www.spacex.com/about" target="_blank" class="links">ABOUT SPACE X</a>
           <div class="block"></div>
         </div>
-      </div>
-      <img class="astronautpic" src="images/astro.png" alt="astonaut">
+          <div data-pointer-events='true' data-selector='.layer1' class="parallax1">
+      <img data-depth="0.4" class="astronautpic layer1" src="images/astro.png" alt="astonaut">
+    </div>
       <div class="rocketcontainer">
         <img class="rockettop" src="images/fusee2.png" alt="rockettop">
         <img class="rocketbottom" src="images/fusee1.png" alt="rocketbottom">
@@ -54,7 +56,9 @@
       </div>
     </div>
     <div class="slide slide2">
-      <img class="engine" src="images/engine.png" alt="engine">
+      <div data-pointer-events='true' data-selector='.layer1' class="parallax2">
+      <img data-depth="0.4" class="engine layer1" src="images/engine.png" alt="engine">
+    </div>
       <div class="maintext">
         <h1>Our technical progress</h1>
         <p class="bold-text">Elon Musk said in February 2014 that the Colonial Transporter Martian would be "100 times larger than an SUV" and
@@ -66,7 +70,7 @@
           <div class="links">
               <a href="https://www.space.com/34192-spacex-raptor-rocket-test-first-photos.html" target="_blank" class="links">ABOUT RAPTOR MOTOR</a>
               <div class="block2"></div>
-            </div>
+          </div>
       </div>
       <div class="grabbutton"></div>
       <div class="thermocontainer">
@@ -107,7 +111,9 @@
       <img class="falcon9" src="images/falcon9.png" alt="falcon9" />
     </div>
     <div class="slide slide4">
-      <img class="mars" src="images/mars.png" alt="mars" />
+      <div data-pointer-events='true' data-selector='.layer1' class="parallax3">
+      <img data-depth="0.4" class="mars layer1" src="images/mars.png" alt="mars" />
+    </div>
       <div class="maintext">
         <h1>Our missions</h1>
         <p class="text-missions">The first launch puts the Martian carrier in low orbit with its crew. The 1st floor returns to its starting point.
@@ -147,9 +153,15 @@
       </div>
     </div>
     <div class="slide slide6">
+<<<<<<< HEAD
       <img src="images/astro2.png" alt="astronaute" class="astro">
       <img src="images/robot.png" alt="astronaute" class="robot_body">
       <img src="images/headRobot.png" alt="astronaute" class="robot">
+=======
+      <div data-pointer-events='true' data-selector='.layer1' class="parallax4">
+      <img data-depth="0.4" class='layer1' src="images/astro2.png" alt="astronaute">
+    </div>
+>>>>>>> origin/master
       <div class="maintext">
         <h1>Une cité autonome selon Musk</h1>
         <p>« Je pense que la chose la plus importante est de créer une ville autonome sur Mars. C’est essentiel pour maximiser la durée de vie de l’humanité; combien de temps notre civilisation durera ».</p>
@@ -184,7 +196,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <script src="script/main.js" charset="utf-8"></script>
     <script type="text/javascript">
-      
+    var parallax1 = document.querySelector('.parallax1')
+    var parallaxInstance = new Parallax(parallax1)
+    var parallax2 = document.querySelector('.parallax2')
+    var parallaxInstance = new Parallax(parallax2)
+    var parallax3 = document.querySelector('.parallax3')
+    var parallaxInstance = new Parallax(parallax3)
+    var parallax4 = document.querySelector('.parallax4')
+    var parallaxInstance = new Parallax(parallax4)
     </script>
 </body>
 

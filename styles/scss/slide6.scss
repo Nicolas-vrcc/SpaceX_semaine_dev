@@ -1,6 +1,7 @@
 .slider {
     .slide6 {
       z-index: 2;
+<<<<<<< HEAD
       .astro{
         position: absolute;
         bottom: 0;
@@ -27,6 +28,8 @@
         100% {transform: rotateY(50deg)}
       }
 
+=======
+>>>>>>> origin/master
       .maintext {
         position: absolute;
         width: 500px;
@@ -46,6 +49,14 @@
           line-height: 1.8em;
         }
       }
+// parallax 4 POSITION
+      .parallax4{
+        .layer1{
+          width: 30em;
+          margin-top: 25%;
+          margin-left: 65em;
+        }
+      }
     }
   }
 
@@ -55,7 +66,7 @@
         .slide6{
           .maintext {
             h1 {
-              margin-top: 2em;            
+              margin-top: 2em;
               margin-bottom: 2em;
             }
             p {
@@ -70,7 +81,7 @@
       }
     }
   }
-  
+
   @media (max-width: 600px) {
     body {
       .slider {

@@ -7,7 +7,7 @@ body {
         position: absolute;
         width: 500px;
         height: 50%;
-        top: 20%;
+        top: 15%;
         left: calc(50% - 250px);
         h1 {
           font-family: NexaHeavy;
@@ -76,6 +76,10 @@ body {
           height: 270px;
           width: auto;
         }
+        .block
+        {
+          display: none;
+        }
       }
     }
   }
@@ -93,6 +97,9 @@ body {
         }
         .rocketcontainer {
           display: none;
+        }
+        a {
+          font-size: 10px;
         }
       }
     }

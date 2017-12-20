@@ -174,24 +174,25 @@ const closeDragElement = () => {
 
   dragElement(rocketBottom)
 
-// HANDLE DRAG slide 2
+// HANDLE DRAG fuel slide 2
 
-const dragElementslide2 = (elmnt) => {
+const dragElementSlide2 = (elmnt) => {
+  console.log(elmnt);
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-    elmnt.onmousedown = dragMouseDownslide2
+    elmnt.onmousedown = dragMouseDownSlide2
 }
 
-const dragMouseDownslide2 = (e) => {
+const dragMouseDownSlide2 = (e) => {
     e = e || window.event;
     // get the mouse cursor position at startup:
     // pos3 = e.clientX;
     pos4 = e.clientY;
-    document.onmouseup = closeDragslide2Element;
+    document.onmouseup = closeDragSlide2Element;
     // call a function whenever the cursor moves:
-    document.onmousemove = elementDragslide2;
+    document.onmousemove = elementDragSlide2;
   }
 let animation2On = true
-const elementDragslide2 = (e) => {
+const elementDragSlide2 = (e) => {
     e = e || window.event;
     // calculate the new cursor position:
     // pos1 = pos3 - e.clientX;
@@ -199,25 +200,22 @@ const elementDragslide2 = (e) => {
     // pos3 = e.clientX;
     pos4 = e.clientY;
     // set the element's new position:
-    if(rocketBottom.offsetTop - pos2 > 250 && rocketBottom.offsetTop - pos2 < 380 && animation2On){
-    rocketBottom.style.top = (rocketBottom.offsetTop - pos2) + "px";
-    // rocketBottom.style.left = (rocketBottom.offsetLeft - pos1) + "px";
-    }
-    if(rocketBottom.offsetTop - pos2 < 250){
-      rocketInside.style.opacity = 0.8
-      rocketBottom.style.opacity = 0.3
-      rocketTop.style.opacity = 0.8
-      animation2On = false
-    }
+    if(buttonSlide2.offsetTop - pos2 > 200 && buttonSlide2.offsetTop - pos2 < 510 && animation2On){
+    buttonSlide2.style.top = (buttonSlide2.offsetTop - pos2) + "px"
+    let clearPosition = buttonSlide2.offsetTop - pos2
+    let transforBar = ((clearPosition - 200) / (500 - 200)) * 10
+    console.log('position : ' + clearPosition,'clear value: ' + transforBar)
+    loadingBar.style.transform = `scaleY(${transforBar})`
+  }
   }
 
-const closeDragslide2Element = () => {
+const closeDragSlide2Element = () => {
     /* stop moving when mouse button is released:*/
     document.onmouseup = null;
     document.onmousemove = null;
   }
 
-  dragElementslide2(rocketBottom)
+  dragElementSlide2(buttonSlide2)
 
 // make rocket land on scroll on slide3
 let rocketpos = 0

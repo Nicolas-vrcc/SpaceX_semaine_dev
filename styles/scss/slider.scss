@@ -78,14 +78,14 @@ body{
     width: 50%;
     height: 100px;
     .circle{
-      width: 20px;
+      min-width: 20px;
       height: 20px;
       border-radius: 100%;
       border: 2px solid lightgrey;
       cursor: pointer;
     }
     .decorationcircle{
-      width: 10px;
+      min-width: 10px;
       height: 10px;
       background-color: lightgrey;
       border-radius: 100%;

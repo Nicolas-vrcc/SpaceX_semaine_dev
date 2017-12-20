@@ -77,7 +77,7 @@ body {
       font-family: NexaHeavy;
       height: auto;
       position: absolute;
-      top: 25%;
+      top: 15%;
       left: 10%;
       font-size: 3.5em;
       font-weight: bold;
@@ -99,7 +99,7 @@ body {
       width: 30em;
       height: auto;
       position: absolute;
-      top: 55%;
+      top: 50%;
       left: 10%;
       font-size: 0.9em;
       color: white;
@@ -194,13 +194,13 @@ body .slider {
     width: 50%;
     height: 100px; }
     body .slider .slidermenu .circle {
-      width: 20px;
+      min-width: 20px;
       height: 20px;
       border-radius: 100%;
       border: 2px solid lightgrey;
       cursor: pointer; }
     body .slider .slidermenu .decorationcircle {
-      width: 10px;
+      min-width: 10px;
       height: 10px;
       background-color: lightgrey;
       border-radius: 100%; }
@@ -296,10 +296,10 @@ body .slider .slide1 {
 .slider .slide2 {
   z-index: 4; }
   .slider .slide2 .engine {
-    width: 70%;
+    width: 55em;
     height: auto;
     position: absolute;
-    top: -20em;
+    top: -18em;
     left: -20em;
     transform: scale(0.55) rotate(-19deg); }
   .slider .slide2 .maintext {
@@ -322,12 +322,28 @@ body .slider .slide1 {
     width: 45em;
     height: auto;
     position: absolute;
-    top: -1em;
+    top: 1em;
     right: -15em;
     transform: rotate(8deg); }
   .slider .slide2 .bold-text {
     font-weight: 900; }
 
+@media (max-width: 800px) {
+  body .slider .slide2 .maintext h1 {
+    margin-top: 2em;
+    margin-bottom: 2em; }
+  body .slider .slide2 .maintext p {
+    font-size: 12px; }
+  body .slider .slide2 .engine {
+    display: none; }
+  body .slider .slide2 .thermo {
+    display: none; } }
+@media (max-width: 600px) {
+  body .slider .slide2 .maintext {
+    width: 80%;
+    height: auto;
+    top: 5%;
+    left: 10%; } }
 .slider .slide3 {
   z-index: 3; }
   .slider .slide3 .mars {

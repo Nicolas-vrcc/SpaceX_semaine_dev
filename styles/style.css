@@ -482,24 +482,24 @@ body .slider .slide1 {
       color: grey;
       line-height: 1.8em; }
 
-.slider .slide5 {
+.slider .slide6 {
   z-index: 2; }
-  .slider .slide5 img {
+  .slider .slide6 img {
     position: absolute;
     bottom: 0;
     left: 2%; }
-  .slider .slide5 .maintext {
+  .slider .slide6 .maintext {
     position: absolute;
     width: 500px;
     height: 50%;
     top: 20%;
     left: calc(50% - 250px); }
-    .slider .slide5 .maintext h1 {
+    .slider .slide6 .maintext h1 {
       font-family: NexaHeavy;
       font-size: 2em;
       color: #4F91F3;
       margin-bottom: 1em; }
-    .slider .slide5 .maintext p {
+    .slider .slide6 .maintext p {
       font-family: NexaLight;
       margin-bottom: 1em;
       color: grey;

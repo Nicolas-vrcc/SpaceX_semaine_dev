@@ -1,0 +1,30 @@
+.slider {
+    .slide5 {
+      z-index: 2;
+      img{
+        position: absolute;
+        bottom: 0;
+        left: 2%;
+      }
+      .maintext {
+        position: absolute;
+        width: 500px;
+        height: 50%;
+        top: 20%;
+        left: calc(50% - 250px);
+        h1 {
+          font-family: NexaHeavy;
+          font-size: 2em;
+          color: $blue;
+          margin-bottom: 1em;
+        }
+        p {
+          font-family: NexaLight;
+          margin-bottom: 1em;
+          color: grey;
+          line-height: 1.8em;
+        }
+      }
+    }
+  }
+  

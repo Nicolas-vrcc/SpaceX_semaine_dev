@@ -34,10 +34,9 @@ const rocketLeg2 = slide4.querySelector('.leg2')
 const textMissions = slide4.querySelectorAll('.text-missions')
 const textMissions2 = slide4.querySelectorAll('.text-missions2')
 
-
 // Buttons on Slide3 that allows the hidden text to appear on click
 button1Slide3.addEventListener('click', (event) => {
-  if(hiddenText1.classList.contains('active')) {
+  if (hiddenText1.classList.contains('active')) {
     hiddenText1.style.opacity = "1"
     line1.style.opacity = "1"
     line2.style.opacity = "1"
@@ -51,7 +50,7 @@ button1Slide3.addEventListener('click', (event) => {
 })
 
 button2Slide3.addEventListener('click', (event) => {
-  if(hiddenText2.classList.contains('active')) {
+  if (hiddenText2.classList.contains('active')) {
     hiddenText2.style.opacity = "1"
     line3.style.opacity = "1"
     line4.style.opacity = "1"
@@ -64,25 +63,28 @@ button2Slide3.addEventListener('click', (event) => {
   }
 })
 
-// Description appearing over the circles with mouseenter event
-for (let i = 0; i < slideButtons.length; i++) {
-  slideButtons[i].addEventListener('mouseenter', (event) => {
-    for (let j = 0; j < textHover.length; j++) {
-      if (i == j) {
-        textHover[j].style.opacity = "1"
-        textHover[j].style.transform = "translateY(-15px)"
+// Checking if the device is larger than 600px
+if (window.innerWidth >= 600) {
+  // Description appearing over the circles with mouseenter event
+  for (let i = 0; i < slideButtons.length; i++) {
+    slideButtons[i].addEventListener('mouseenter', (event) => {
+      for (let j = 0; j < textHover.length; j++) {
+        if (i == j) {
+          textHover[j].style.opacity = "1"
+          textHover[j].style.transform = "translateY(-15px)"
+        }
       }
-    }
-  })
-  // Description disappearing over the circles with mouseleave event
-  slideButtons[i].addEventListener('mouseleave', (event) => {
-    for (let j = 0; j < textHover.length; j++) {
-      if (i == j) {
-        textHover[j].style.opacity = "0"
-        textHover[j].style.transform = "translateY(0)"
+    })
+    // Description disappearing over the circles with mouseleave event
+    slideButtons[i].addEventListener('mouseleave', (event) => {
+      for (let j = 0; j < textHover.length; j++) {
+        if (i == j) {
+          textHover[j].style.opacity = "0"
+          textHover[j].style.transform = "translateY(0)"
+        }
       }
-    }
-  })
+    })
+  }
 }
 
 console.log(buttonSlide2);

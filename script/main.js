@@ -19,6 +19,60 @@ allImg.forEach((img) =>{
   img.ondragstart = function() { return false }
 })
 
+// handle the cool cursor
+const $cursor = document.querySelector('.cursor')
+let radius = 40
+let speedX = 4
+let speedY = 4
+const event = 0
+
+document.addEventListener('mousemove', (event) =>
+{
+    const mouse = {x: event.clientX, y:event.clientY}
+
+    speedX += (mouse.x - speedX) * 0.35
+    speedY += (mouse.y - speedY) * 0.35
+
+    $cursor.style.top = speedY - 20 + 'px'
+    $cursor.style.left = speedX - 20 + 'px'
+
+    if (mouse.x > 300 && mouse.x < 1000)
+    {
+        $cursor.classList.add('mousedown')
+    }
+    else
+    {
+        $cursor.classList.remove('mousedown')
+    }
+    // $cursor.classList.add('mousemove')
+    // setTimeout(() => {
+    //     $cursor.classList.remove('mousemove')
+    // }, 1000)
+
+})
+$cursor.style.top = event.clientY + 20 + 'px'
+$cursor.style.left = event.clientX + 20 + 'px'
+
+
+document.addEventListener('mousedown', (event) =>
+{
+    const mouse = {x: event.clientX, y:event.clientY}
+    if ($cursor.classList.contains('mousedown'))
+    {
+        $cursor.classList.add('click')
+        setTimeout(() => {
+        $cursor.classList.remove('click')
+        }, 400)
+    }
+    else
+    {
+        $cursor.classList.add('click2')
+        setTimeout(() => {
+        $cursor.classList.remove('click2')
+        }, 400)
+    }
+})
+
 // event listeners
 startBtn.addEventListener('click', (e) => {
   homePage.style.opacity = 0
@@ -55,13 +109,16 @@ slideButtons.forEach((button) => {
     }
   })
 })
+
 //make rocket merge on slide 1 and displays the inside of it
 let slide1RocketPos = 0
 let lastClientY = 0
+let incrementpos = 0
 rocketBottom.addEventListener('mousemove',(e)=>{
   if(e.which == 1 && slide1RocketPos > -120){
+    incrementpos = lastClientY - e.clientY
     rocketBottom.style.transform = `translateY(${slide1RocketPos}px)`
-    slide1RocketPos -= 3
+    slide1RocketPos += incrementpos
 
   }
 })
@@ -146,7 +203,7 @@ window.addEventListener('mousewheel', (e) => {
         console.log(textpos)
         if (textpos <= 300) {
           textpos += 20
-          textMission.style.transform = `translateY(${textpos}px)`          
+          textMission.style.transform = `translateY(${textpos}px)`
           // Second text appearing if the first is down
           if (textpos >= 220) {
             for(const textMission2 of textMissions2) {

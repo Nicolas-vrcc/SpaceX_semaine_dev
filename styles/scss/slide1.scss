@@ -26,6 +26,25 @@
       position: absolute;
       bottom: -5px;
     }
-
+    .rocketcontainer{
+      position: absolute;
+      width: 20%;
+      height: 100%;
+      // background-color: lightblue;
+      top: 0%;
+      right: 5%;
+    img{
+      display: block;
+      height: 50%;
+      width: auto;
+      margin: auto;
+    }
+    .rocketbottom{
+      cursor: pointer;
+    }
+    .rocketthrough{
+      display: none;
+    }
+    }
   }
 }

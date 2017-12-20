@@ -111,17 +111,21 @@ slideButtons.forEach((button) => {
 })
 
 //make rocket merge on slide 1 and displays the inside of it
-let slide1RocketPos = 0
-let lastClientY = 0
-let incrementpos = 0
-rocketBottom.addEventListener('mousemove',(e)=>{
-  if(e.which == 1 && slide1RocketPos > -120){
-    incrementpos = lastClientY - e.clientY
-    rocketBottom.style.transform = `translateY(${slide1RocketPos}px)`
-    slide1RocketPos += incrementpos
-
-  }
-})
+// let slide1RocketPos = 0
+// let lastClientY = 0
+// let incrementPos = 0
+// rocketBottom.addEventListener('mousemove',(e)=>{
+//   if(e.which == 1 && slide1RocketPos > -120){
+//     setTimeout(() =>{
+//     lastClientY = e.clientY
+//     }, 600)
+//     incrementPos = lastClientY - e.clientY
+//     rocketBottom.style.transform = `translateY(${slide1RocketPos}px)`
+//     slide1RocketPos += incrementPos
+//     console.log('lastclient ' + e.clientY, 'previous' + lastClientY ,incrementPos)
+//
+//   }
+// })
 // make rocket land on scroll on slide3
 let rocketpos = 0
 let legpos = 0

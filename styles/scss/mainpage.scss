@@ -27,8 +27,8 @@ body{
     width: 100%;
     // Hack in order to get scroll event still working
     height: calc(100% + 1px);
-    z-index: 1;
-    display: none;
+    z-index: 8;
+    // display: none;
     overflow: hidden;
     background-image: url(../images/bck.png);
     background-size: cover;

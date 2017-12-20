@@ -30,9 +30,11 @@
 
     }
     .thermo{
+      width: 45em;
+      height: auto;
       position: absolute;
-      top: 8%;
-      left: 65%;
+      top: -1em;
+      right: -15em;
       transform: rotate(8deg);
     }
     .bold-text{

@@ -320,9 +320,11 @@ body .slider {
       color: grey;
       line-height: 1.8em; }
   .slider .slide2 .thermo {
+    width: 45em;
+    height: auto;
     position: absolute;
-    top: 8%;
-    left: 65%;
+    top: -1em;
+    right: -15em;
     transform: rotate(8deg); }
   .slider .slide2 .bold-text {
     font-weight: 900; }

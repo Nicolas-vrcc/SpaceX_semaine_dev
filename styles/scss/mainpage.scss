@@ -7,6 +7,8 @@
   }
 }
 body{
+
+body {
   overflow: hidden;
   position: absolute;
   width: 100%;
@@ -17,25 +19,23 @@ body{
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  .homepagegone{
+  .homepagegone {
     transform: translateY(-100%);
     opacity: 0.3;
   }
-  .home{
+  .home {
     position: absolute;
     display: block;
-    width: 100%;
-    // Hack in order to get scroll event still working
+    width: 100%; // Hack in order to get scroll event still working
     height: calc(100% + 1px);
-    z-index: 8;
-    display: none;
+    z-index: 8; // display: none;
     overflow: hidden;
     background-image: url(../images/bck.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-clip: border-box;
     transition: transform 1s ease, opacity 1s ease;
-    h1{
+    h1 {
       font-family: NexaHeavy;
       height: auto;
       position: absolute;
@@ -44,8 +44,8 @@ body{
       font-size: 3.5em;
       font-weight: bold;
       color: white;
-      b{
-        &:before{
+      b {
+        &:before {
           position: absolute;
           top: 2.5em;
           content: '';
@@ -56,12 +56,12 @@ body{
           transition: width 0.5s ease;
           z-index: -1;
         }
-        &:hover:before{
+        &:hover:before {
           width: 3em;
         }
       }
     }
-    p{
+    p {
       font-family: NexaLight;
       width: 30em;
       height: auto;
@@ -72,13 +72,13 @@ body{
       color: white;
       line-height: 1.8em;
     }
-    img{
+    img {
       width: 180px;
       position: absolute;
       bottom: 50px;
       right: 60px;
     }
-    button{
+    button {
       position: absolute;
       bottom: 80px;
       font-family: Arial, sans-serif;
@@ -88,13 +88,34 @@ body{
       color: white;
       text-align: center;
     }
-    .white-line{
+    .white-line {
       width: 2px;
       height: 50px;
       background: white;
       position: absolute;
       bottom: 0;
       left: 50%;
+    }
+/* Responsive iphone7 */
+
+@media (max-width: 600px) {
+  body {
+    .home {
+      background-position: center;
+      h1 {
+        top: 5%;
+        font-size: 2.5em;
+      }
+      p {
+        width: 80%;
+        top: 30%;
+      }
+      img {
+        display: none;
+      }
+      button {
+        bottom: 60px;
+      }
     }
   }
 }

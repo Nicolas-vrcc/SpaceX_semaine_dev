@@ -127,6 +127,20 @@ body {
       bottom: 0;
       left: 50%; }
 
+/* Responsive iphone7 */
+@media (max-width: 600px) {
+  body .home {
+    background-position: center; }
+    body .home h1 {
+      top: 5%;
+      font-size: 2.5em; }
+    body .home p {
+      width: 80%;
+      top: 30%; }
+    body .home img {
+      display: none; }
+    body .home button {
+      bottom: 60px; } }
 @keyframes display {
   0% {
     opacity: 0;
@@ -234,9 +248,9 @@ body .slider .slide1 {
       margin-bottom: 1em;
       color: grey;
       line-height: 1.8em; }
-  body .slider .slide1 .astronautpic {
-    height: 70%;
-    width: auto;
+  .slider .slide1 .astronautpic {
+    height: auto;
+    width: 25%;
     position: absolute;
     bottom: -5px; }
   body .slider .slide1 .rocketcontainer {
@@ -263,6 +277,18 @@ body .slider .slide1 {
       pointer-events: none;
       transition: opacity 0.8s ease-in; }
 
+@media (max-width: 800px) {
+  body .slider .slide1 .astronautpic {
+    height: 270px;
+    width: auto; } }
+@media (max-width: 600px) {
+  body .slider .slide1 .maintext {
+    width: 80%;
+    height: auto;
+    top: 5%;
+    left: 10%; }
+  body .slider .slide1 .rocketcontainer {
+    display: none; } }
 .slider .slide2 {
   z-index: 4; }
   .slider .slide2 .engine {

@@ -23,8 +23,8 @@ body{
       }
     }
     .astronautpic{
-      height: 70%;
-      width: auto;
+      height: auto;
+      width: 25%;
       position: absolute;
       bottom: -5px;
     }
@@ -58,4 +58,35 @@ body{
     }
   }
 }
+}
+
+@media (max-width: 800px) {
+  body {
+    .slider {
+      .slide1 {
+        .astronautpic {
+          height: 270px;
+          width: auto;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    .slider {
+      .slide1 {
+        .maintext {
+          width: 80%;
+          height: auto;
+          top: 5%;
+          left: 10%;
+        }
+        .rocketcontainer {
+          display: none;
+        }
+      }
+    }
+  }
 }

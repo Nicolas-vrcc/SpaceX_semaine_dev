@@ -119,7 +119,7 @@ slideButtons.forEach((button) => {
         slides[i].style.display = 'block'
         slides[i].classList.add('active')
         slideButtons[i].classList.add('clickedbtn')
-        if(i == 2 || i == 3){
+        if(i == 3 || i == 4 || i == 5){
           document.body.style.backgroundColor = 'black'
         }
         else{
@@ -203,9 +203,15 @@ const elementDragSlide2 = (e) => {
     if(buttonSlide2.offsetTop - pos2 > 200 && buttonSlide2.offsetTop - pos2 < 510 && animation2On){
     buttonSlide2.style.top = (buttonSlide2.offsetTop - pos2) + "px"
     let clearPosition = buttonSlide2.offsetTop - pos2
-    let transforBar = ((clearPosition - 200) / (500 - 200)) * 10
+    let transforBar = (1 - ((clearPosition - 200) / (500 - 200))) * 10
+    if(transforBar > 10){
+      transforBar = 10
+    }
+    if(transforBar < 0){
+      transforBar = 0
+    }
     console.log('position : ' + clearPosition,'clear value: ' + transforBar)
-    loadingBar.style.transform = `scaleY(${transforBar})`
+    loadingBar.style.transform = `rotate(8deg) scaleY(${transforBar})`
   }
   }
 

@@ -27,14 +27,24 @@ body {
     display: block;
     width: 100%; // Hack in order to get scroll event still working
     height: calc(100% + 1px);
-    z-index: 8;
     display: none;
+    z-index: 8;
     overflow: hidden;
     background-image: url(../images/bck.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-clip: border-box;
     transition: transform 1s ease, opacity 1s ease;
+
+    .link_homepage
+    {
+      text-decoration: none;
+    }
+    .link_logo
+    {
+      cursor: pointer;
+    }
+    
     h1 {
       font-family: NexaHeavy;
       height: auto;

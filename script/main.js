@@ -37,30 +37,30 @@ const textMissions2 = slide4.querySelectorAll('.text-missions2')
 
 // Buttons on Slide3 that allows the hidden text to appear on click
 button1Slide3.addEventListener('click', (event) => {
-  if (hiddenText1.classList.contains('hidden')) {
+  if(hiddenText1.classList.contains('active')) {
     hiddenText1.style.opacity = "1"
     line1.style.opacity = "1"
     line2.style.opacity = "1"
-    hiddenText1.classList.remove('hidden')
+    hiddenText1.classList.remove('active')
   } else {
     hiddenText1.style.opacity = "0"
     line1.style.opacity = "0"
     line2.style.opacity = "0"
-    hiddenText1.classList.add('hidden')
+    hiddenText1.classList.add('active')
   }
 })
 
 button2Slide3.addEventListener('click', (event) => {
-  if (hiddenText2.classList.contains('hidden')) {
+  if(hiddenText2.classList.contains('active')) {
     hiddenText2.style.opacity = "1"
     line3.style.opacity = "1"
     line4.style.opacity = "1"
-    hiddenText2.classList.remove('hidden')
+    hiddenText2.classList.remove('active')
   } else {
     hiddenText2.style.opacity = "0"
     line3.style.opacity = "0"
     line4.style.opacity = "0"
-    hiddenText2.classList.add('hidden')
+    hiddenText2.classList.add('active')
   }
 })
 

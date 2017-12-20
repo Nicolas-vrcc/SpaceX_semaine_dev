@@ -5,7 +5,9 @@ const startBtn = homePage.querySelector('.startbtn')
 const mainSlider = document.querySelector('.slider')
 const slides = document.querySelectorAll('.slide')
 const slideButtons = document.querySelectorAll('.circle')
+const rocketTop = document.querySelector('.rockettop');
 const rocketBottom = document.querySelector('.rocketbottom')
+const rocketInside = document.querySelector('.rocketthrough');
 const slide3 = document.querySelector('.slide3')
 const scrollDownText = slide3.querySelector('.scroll-down-container')
 const rocketPicture = slide3.querySelector('.bfr')
@@ -33,8 +35,8 @@ document.addEventListener('mousemove', (event) =>
     speedX += (mouse.x - speedX) * 0.35
     speedY += (mouse.y - speedY) * 0.35
 
-    $cursor.style.top = speedY - 20 + 'px'
-    $cursor.style.left = speedX - 20 + 'px'
+    $cursor.style.top = speedY - 15 + 'px'
+    $cursor.style.left = speedX - 15 + 'px'
 
     if (mouse.x > 300 && mouse.x < 1000)
     {
@@ -101,8 +103,10 @@ slideButtons.forEach((button) => {
     for (let i = 0; i < slides.length; i++) {
       slides[i].classList.remove('active')
       slideButtons[i].classList.remove('clickedbtn')
+      slides[i].style.display = 'none'
       // add active class the slides depending on the corresponding dot clicked
       if (slides[i].classList.contains(e.target.dataset.ref)) {
+        slides[i].style.display = 'block'
         slides[i].classList.add('active')
         slideButtons[i].classList.add('clickedbtn')
       }
@@ -110,22 +114,48 @@ slideButtons.forEach((button) => {
   })
 })
 
-//make rocket merge on slide 1 and displays the inside of it
-// let slide1RocketPos = 0
-// let lastClientY = 0
-// let incrementPos = 0
-// rocketBottom.addEventListener('mousemove',(e)=>{
-//   if(e.which == 1 && slide1RocketPos > -120){
-//     setTimeout(() =>{
-//     lastClientY = e.clientY
-//     }, 600)
-//     incrementPos = lastClientY - e.clientY
-//     rocketBottom.style.transform = `translateY(${slide1RocketPos}px)`
-//     slide1RocketPos += incrementPos
-//     console.log('lastclient ' + e.clientY, 'previous' + lastClientY ,incrementPos)
-//
-//   }
-// })
+const dragElement = (elmnt) => {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    elmnt.onmousedown = dragMouseDown
+}
+
+const dragMouseDown = (e) => {
+    e = e || window.event;
+    // get the mouse cursor position at startup:
+    // pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+let animationOn = true
+const elementDrag = (e) => {
+    e = e || window.event;
+    // calculate the new cursor position:
+    // pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    // pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    if(rocketBottom.offsetTop - pos2 > 250 && rocketBottom.offsetTop - pos2 < 380 && animationOn){
+    rocketBottom.style.top = (rocketBottom.offsetTop - pos2) + "px";
+    // rocketBottom.style.left = (rocketBottom.offsetLeft - pos1) + "px";
+    }
+    if(rocketBottom.offsetTop - pos2 < 250){
+      rocketInside.style.opacity = 0.8
+      rocketBottom.style.opacity = 0.3
+      rocketTop.style.opacity = 0.8
+      animationOn = false
+    }
+  }
+
+const closeDragElement = () => {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+
+  dragElement(rocketBottom)
 // make rocket land on scroll on slide3
 let rocketpos = 0
 let legpos = 0
@@ -139,7 +169,6 @@ window.addEventListener('mousewheel', (e) => {
     } else {
       scrollDownText.style.opacity = '0'
     }
-
     // Checking if the user scroll up or down
     if (e.wheelDelta >= 0) {
       if (rocketpos >= 0) {

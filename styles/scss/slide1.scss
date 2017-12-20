@@ -1,5 +1,7 @@
+body{
 .slider{
   .slide1{
+    display: block;
     z-index: 5;
     .maintext{
       position: absolute;
@@ -40,11 +42,20 @@
       margin: auto;
     }
     .rocketbottom{
+      position: absolute;
       cursor: pointer;
+      left: calc(50% - 60px);
     }
     .rocketthrough{
-      display: none;
+      position: absolute;
+      opacity: 0;
+      top: 18%;
+      left: calc(50% - 35px);
+      transform: scale(1.5);
+      pointer-events: none;
+      transition: opacity 0.8s ease-in;
     }
     }
   }
+}
 }

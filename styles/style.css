@@ -468,23 +468,29 @@ body .slider .slide1 {
     top: 5%;
     right: 15%; }
 
+@media (max-width: 1000px) {
+  .dragon,
+  .button,
+  .lines,
+  .lines2,
+  .falcon9 {
+    display: none; }
+
+  .slider .slide3 .maintext .hidden-text1,
+  .slider .slide3 .maintext .hidden-text2 {
+    opacity: 1; } }
 @media (max-width: 800px) {
   body .slider .slide3 .maintext h1 {
     margin-top: 2em;
     margin-bottom: 2em; }
   body .slider .slide3 .maintext p {
-    font-size: 12px; }
-  body .slider .slide3 .astronautpic {
-    height: 270px;
-    width: auto; } }
+    font-size: 12px; } }
 @media (max-width: 600px) {
   body .slider .slide3 .maintext {
     width: 80%;
     height: auto;
     top: 5%;
-    left: 10%; }
-  body .slider .slide3 .rocketcontainer {
-    display: none; } }
+    left: 10%; } }
 .slider .slide4 {
   z-index: 3; }
   .slider .slide4 .mars {

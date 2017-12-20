@@ -1,13 +1,20 @@
 // get DOM elements
 const allImg = document.querySelectorAll('img');
+//homepage
 const homePage = document.querySelector('.home')
 const startBtn = homePage.querySelector('.startbtn')
+//slider
 const mainSlider = document.querySelector('.slider')
 const slides = document.querySelectorAll('.slide')
 const slideButtons = document.querySelectorAll('.circle')
+//slide1
 const rocketTop = document.querySelector('.rockettop');
 const rocketBottom = document.querySelector('.rocketbottom')
-const rocketInside = document.querySelector('.rocketthrough');
+const rocketInside = document.querySelector('.rocketthrough')
+//slide2
+const buttonSlide2 = document.querySelector('.grabbutton')
+const loadingBar = document.querySelector('.progressbar');
+//slide3
 const slide3 = document.querySelector('.slide3')
 const scrollDownText = slide3.querySelector('.scroll-down-container')
 const rocketPicture = slide3.querySelector('.bfr')
@@ -15,7 +22,10 @@ const rocketLeg1 = slide3.querySelector('.leg1')
 const rocketLeg2 = slide3.querySelector('.leg2')
 const textMissions = slide3.querySelectorAll('.text-missions')
 const textMissions2 = slide3.querySelectorAll('.text-missions2')
+//slide4
 
+console.log(buttonSlide2);
+console.log(loadingBar);
 // disable image dragging
 allImg.forEach((img) =>{
   img.ondragstart = function() { return false }
@@ -109,6 +119,12 @@ slideButtons.forEach((button) => {
         slides[i].style.display = 'block'
         slides[i].classList.add('active')
         slideButtons[i].classList.add('clickedbtn')
+        if(i == 2 || i == 3){
+          document.body.style.backgroundColor = 'black'
+        }
+        else{
+          document.body.style.backgroundColor = '#F8F8F8'
+        }
       }
     }
   })
@@ -157,6 +173,52 @@ const closeDragElement = () => {
   }
 
   dragElement(rocketBottom)
+
+// HANDLE DRAG slide 2
+
+const dragElementslide2 = (elmnt) => {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    elmnt.onmousedown = dragMouseDownslide2
+}
+
+const dragMouseDownslide2 = (e) => {
+    e = e || window.event;
+    // get the mouse cursor position at startup:
+    // pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragslide2Element;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDragslide2;
+  }
+let animation2On = true
+const elementDragslide2 = (e) => {
+    e = e || window.event;
+    // calculate the new cursor position:
+    // pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    // pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    if(rocketBottom.offsetTop - pos2 > 250 && rocketBottom.offsetTop - pos2 < 380 && animation2On){
+    rocketBottom.style.top = (rocketBottom.offsetTop - pos2) + "px";
+    // rocketBottom.style.left = (rocketBottom.offsetLeft - pos1) + "px";
+    }
+    if(rocketBottom.offsetTop - pos2 < 250){
+      rocketInside.style.opacity = 0.8
+      rocketBottom.style.opacity = 0.3
+      rocketTop.style.opacity = 0.8
+      animation2On = false
+    }
+  }
+
+const closeDragslide2Element = () => {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+
+  dragElementslide2(rocketBottom)
+
 // make rocket land on scroll on slide3
 let rocketpos = 0
 let legpos = 0

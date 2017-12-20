@@ -136,9 +136,31 @@
             font-size: 12px;
           }
         }
-        .astronautpic {
-          height: 270px;
-          width: auto;
+        .scroll-down-container
+        {
+          display: none;
+        }
+        .bfr
+        {
+          display: none;
+        }
+        .leg1
+        {
+          display: none;
+        }
+        .leg2
+        {
+          display: none;
+        }
+        .mars {
+          z-index: 10;
+          width: 80%;
+          top: 75%;
+        }
+        .text-missions2
+        {
+          opacity: 1;
+          top: 70%;
         }
       }
     }

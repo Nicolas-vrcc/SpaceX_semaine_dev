@@ -15,13 +15,13 @@ const rocketInside = document.querySelector('.rocketthrough')
 const buttonSlide2 = document.querySelector('.grabbutton')
 const loadingBar = document.querySelector('.progressbar');
 //slide3
-const slide3 = document.querySelector('.slide3')
-const scrollDownText = slide3.querySelector('.scroll-down-container')
-const rocketPicture = slide3.querySelector('.bfr')
-const rocketLeg1 = slide3.querySelector('.leg1')
-const rocketLeg2 = slide3.querySelector('.leg2')
-const textMissions = slide3.querySelectorAll('.text-missions')
-const textMissions2 = slide3.querySelectorAll('.text-missions2')
+const slide4 = document.querySelector('.slide4')
+const scrollDownText = slide4.querySelector('.scroll-down-container')
+const rocketPicture = slide4.querySelector('.bfr')
+const rocketLeg1 = slide4.querySelector('.leg1')
+const rocketLeg2 = slide4.querySelector('.leg2')
+const textMissions = slide4.querySelectorAll('.text-missions')
+const textMissions2 = slide4.querySelectorAll('.text-missions2')
 //slide4
 
 console.log(buttonSlide2);
@@ -224,7 +224,7 @@ let rotateleg1 = -30
 let rotateleg2 = 30
 let textpos = 0
 window.addEventListener('mousewheel', (e) => {
-  if (slide3.classList.contains('active')) {
+  if (slide4.classList.contains('active')) {
     if (rocketpos <= 0) {
       scrollDownText.style.opacity = '1'
     } else {
@@ -234,7 +234,7 @@ window.addEventListener('mousewheel', (e) => {
     if (e.wheelDelta >= 0) {
       if (rocketpos >= 0) {
         // Moving up the rocket position
-        rocketpos -= 10
+        rocketpos -= 8
         legpos -= 10
         rocketPicture.style.transform = `translateY(${rocketpos}px)`
         // rectracting the legs with transform

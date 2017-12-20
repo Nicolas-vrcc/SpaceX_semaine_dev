@@ -7,6 +7,7 @@
       left: -20%;
       width: 40%;
       height: auto;
+      // Animation to make Mars float
       -webkit-animation-name: Floatingx;
       -webkit-animation-duration: 2s;
       -webkit-animation-iteration-count: infinite;
@@ -31,8 +32,8 @@
     .maintext{
       position: absolute;
       width: 500px;
-      height: 50%;
-      top: 20%;
+      height: 80%;
+      bottom: 0;
       left: calc(50% - 250px);
       h1{
         font-family: NexaHeavy;
@@ -45,14 +46,28 @@
         margin-bottom: 1em;
         color: grey;
         line-height: 1.8em;
+        transform: translateY(0)
+      }
+      .text-missions2{
+        position: absolute;
+        left: 0;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+      }
+      .first{        
+        top: 4em;
+      }
+      .second{
+        top: 12em;
       }
       .shadow{
         position: absolute;
         bottom: 0;
         left: 0;
         width: 100%;
-        height: 30%;
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 1) 90%);
+        height: 50%;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 1) 50%);
+        z-index: 3;
       }
     }
     .bfr{

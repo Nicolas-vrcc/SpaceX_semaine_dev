@@ -43,21 +43,9 @@ slideButtons.forEach((button) => {
       slideButtons[i].classList.remove('clickedbtn')
     }
     // add active class the slides depending on the corresponding dot clicked
-    if (slides[0].classList.contains(e.target.dataset.ref)) {
-      slides[0].classList.add('active')
-      slideButtons[0].classList.add('clickedbtn')
-    }
-    if (slides[1].classList.contains(e.target.dataset.ref)) {
-      slides[1].classList.add('active')
-      slideButtons[1].classList.add('clickedbtn')
-    }
-    if (slides[2].classList.contains(e.target.dataset.ref)) {
-      slides[2].classList.add('active')
-      slideButtons[2].classList.add('clickedbtn')
-    }
-    if (slides[3].classList.contains(e.target.dataset.ref)) {
-      slides[3].classList.add('active')
-      slideButtons[3].classList.add('clickedbtn')
+    if (slides[i].classList.contains(e.target.dataset.ref)) {
+      slides[i].classList.add('active')
+      slideButtons[i].classList.add('clickedbtn')
     }
   })
 })

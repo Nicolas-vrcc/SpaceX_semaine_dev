@@ -34,7 +34,6 @@ const rocketLeg2 = slide4.querySelector('.leg2')
 const textMissions = slide4.querySelectorAll('.text-missions')
 const textMissions2 = slide4.querySelectorAll('.text-missions2')
 
-
 // Buttons on Slide3 that allows the hidden text to appear on click
 button1Slide3.addEventListener('click', (event) => {
   if(hiddenText1.classList.contains('hidden')) {
@@ -52,25 +51,28 @@ button2Slide3.addEventListener('click', (event) => {
   }
 })
 
-// Description appearing over the circles with mouseenter event
-for (let i = 0; i < slideButtons.length; i++) {
-  slideButtons[i].addEventListener('mouseenter', (event) => {
-    for (let j = 0; j < textHover.length; j++) {
-      if (i == j) {
-        textHover[j].style.opacity = "1"
-        textHover[j].style.transform = "translateY(-15px)"
+// Checking if the device is larger than 600px
+if (window.innerWidth >= 600) {
+  // Description appearing over the circles with mouseenter event
+  for (let i = 0; i < slideButtons.length; i++) {
+    slideButtons[i].addEventListener('mouseenter', (event) => {
+      for (let j = 0; j < textHover.length; j++) {
+        if (i == j) {
+          textHover[j].style.opacity = "1"
+          textHover[j].style.transform = "translateY(-15px)"
+        }
       }
-    }
-  })
-  // Description disappearing over the circles with mouseleave event
-  slideButtons[i].addEventListener('mouseleave', (event) => {
-    for (let j = 0; j < textHover.length; j++) {
-      if (i == j) {
-        textHover[j].style.opacity = "0"
-        textHover[j].style.transform = "translateY(0)"
+    })
+    // Description disappearing over the circles with mouseleave event
+    slideButtons[i].addEventListener('mouseleave', (event) => {
+      for (let j = 0; j < textHover.length; j++) {
+        if (i == j) {
+          textHover[j].style.opacity = "0"
+          textHover[j].style.transform = "translateY(0)"
+        }
       }
-    }
-  })
+    })
+  }
 }
 
 console.log(buttonSlide2);
@@ -294,20 +296,20 @@ window.addEventListener('mousewheel', (e) => {
     if (e.wheelDelta >= 0) {
       if (rocketpos >= 0) {
         // Moving up the rocket position
-        rocketpos -= 8
-        legpos -= 10
+        rocketpos -= 20
+        legpos -= 20
         rocketPicture.style.transform = `translateY(${rocketpos}px)`
         // rectracting the legs with transform
         if (legpos >= 360 && legpos <= 380) {
           rotateleg1 -= 8
           rotateleg2 += 8
-          legpos -= 12
+          legpos -= 22
           rocketLeg1.style.transform = `translateY(${legpos}px) rotate(${rotateleg1}deg) translateX(8px)`
           rocketLeg2.style.transform = `translateY(${legpos}px) rotate(${rotateleg2}deg) translateX(-8px)`
         } else if (legpos > 380) {
-          rotateleg1 -= 8
-          rotateleg2 += 8
-          legpos -= 17
+          rotateleg1 -= 10
+          rotateleg2 += 10
+          legpos -= 22
           rocketLeg1.style.transform = `translateY(${legpos}px) rotate(${rotateleg1}deg) translateX(15px)`
           rocketLeg2.style.transform = `translateY(${legpos}px) rotate(${rotateleg2}deg) translateX(-15px)`
         } else {

@@ -31,7 +31,7 @@
 @media (max-width: 800px) {
   body {
     .slider {
-      .slide1 {
+      .slide4 {
         .maintext {
           h1 {
             margin-top: 2em;            
@@ -53,15 +53,15 @@
 @media (max-width: 600px) {
   body {
     .slider {
-      .slide1 {
+      .slide4 {
         .maintext {
           width: 80%;
           height: auto;
           top: 5%;
           left: 10%;
         }
-        .rocketcontainer {
-          display: none;
+        img {
+          width: 75%;
         }
       }
     }

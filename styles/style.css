@@ -296,6 +296,13 @@ body .slider {
 
 .slider .slide2 {
   z-index: 4; }
+  .slider .slide2 .engine {
+    width: 70%;
+    height: auto;
+    position: absolute;
+    top: -20em;
+    left: -20em;
+    transform: scale(0.55) rotate(-19deg); }
   .slider .slide2 .maintext {
     position: absolute;
     width: 500px;
@@ -312,11 +319,6 @@ body .slider {
       margin-bottom: 1em;
       color: grey;
       line-height: 1.8em; }
-  .slider .slide2 .engine {
-    position: absolute;
-    transform: scale(0.55) rotate(-19deg);
-    top: -53%;
-    left: -28%; }
   .slider .slide2 .thermo {
     position: absolute;
     top: 8%;

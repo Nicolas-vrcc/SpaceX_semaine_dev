@@ -1,6 +1,14 @@
 .slider{
   .slide2{
-    z-index: 4;
+    z-index: 4;    
+    .engine{
+      width: 70%;
+      height: auto;
+      position: absolute;
+      top: -20em;
+      left: -20em;
+      transform: scale(0.55) rotate(-19deg);
+    }
     .maintext{
       position: absolute;
       width: 500px;
@@ -20,12 +28,6 @@
         line-height: 1.8em;
       }
 
-    }
-    .engine{
-      position: absolute;
-      transform: scale(0.55) rotate(-19deg);
-      top: -53%;
-      left: -28%;
     }
     .thermo{
       position: absolute;

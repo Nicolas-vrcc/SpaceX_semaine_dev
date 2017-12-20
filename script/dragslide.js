@@ -1,3 +1,7 @@
+//get DOM elements
+const buttonSlide2 = document.querySelector('selector')
+const loadingBar = document.querySelector('selector');
+
 const dragElementslide2 = (elmnt) => {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
     elmnt.onmousedown = dragMouseDownslide2

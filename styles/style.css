@@ -164,6 +164,30 @@ body .slider {
   body .slider .slide {
     opacity: 0;
     display: none; }
+    body .slider .slide .links {
+      font-family: NexaLight;
+      color: grey;
+      font-size: 0.96em;
+      text-align: right;
+      margin-top: 3em;
+      text-decoration: none; }
+    body .slider .slide .links:hover {
+      cursor: pointer; }
+    body .slider .slide .links:hover .block {
+      animation: transformation 0.5s ease-in-out forwards;
+      transform-origin: right; }
+@keyframes transformation {
+  0% {
+    transform: scaleX(1); }
+  100% {
+    transform: scaleX(1.3); } }
+    body .slider .slide .block {
+      position: absolute;
+      width: 10em;
+      height: 0.2em;
+      background-color: #4F91F3;
+      left: 70%;
+      bottom: -18%; }
   body .slider .slide1 {
     position: absolute;
     width: 100%;
@@ -246,7 +270,7 @@ body .slider .slide1 {
     position: absolute;
     width: 500px;
     height: 50%;
-    top: 20%;
+    top: 15%;
     left: calc(50% - 250px); }
     body .slider .slide1 .maintext h1 {
       font-family: NexaHeavy;
@@ -295,7 +319,9 @@ body .slider .slide1 {
     font-size: 12px; }
   body .slider .slide1 .astronautpic {
     height: 270px;
-    width: auto; } }
+    width: auto; }
+  body .slider .slide1 .block {
+    display: none; } }
 @media (max-width: 600px) {
   body .slider .slide1 .maintext {
     width: 80%;
@@ -303,9 +329,26 @@ body .slider .slide1 {
     top: 5%;
     left: 10%; }
   body .slider .slide1 .rocketcontainer {
-    display: none; } }
+    display: none; }
+  body .slider .slide1 a {
+    font-size: 10px; } }
 .slider .slide2 {
   z-index: 4; }
+  .slider .slide2 .block2 {
+    position: absolute;
+    width: 14em;
+    height: 0.2em;
+    background-color: #4F91F3;
+    left: 56.5%;
+    bottom: -27%; }
+  .slider .slide2 .links:hover .block2 {
+    animation: transformation2 0.5s ease-in-out forwards;
+    transform-origin: right; }
+@keyframes transformation2 {
+  0% {
+    transform: scaleX(1); }
+  100% {
+    transform: scaleX(1.3); } }
   .slider .slide2 .engine {
     width: 55em;
     height: auto;
@@ -317,7 +360,7 @@ body .slider .slide1 {
     position: absolute;
     width: 500px;
     height: 50%;
-    top: 20%;
+    top: 15%;
     left: calc(50% - 250px); }
     .slider .slide2 .maintext h1 {
       font-family: NexaHeavy;
@@ -367,6 +410,8 @@ body .slider .slide1 {
   body .slider .slide2 .engine {
     width: 42em; }
   body .slider .slide2 .thermo {
+    display: none; }
+  body .slider .slide2 .block2 {
     display: none; } }
 @media (max-width: 600px) {
   body .slider .slide2 .maintext {
@@ -376,6 +421,21 @@ body .slider .slide1 {
     left: 10%; } }
 .slider .slide3 {
   z-index: 2; }
+  .slider .slide3 .block3 {
+    position: absolute;
+    width: 14em;
+    height: 0.2em;
+    background-color: #4F91F3;
+    left: 56.5%;
+    bottom: -18%; }
+  .slider .slide3 .links:hover .block3 {
+    animation: transformation3 0.5s ease-in-out forwards;
+    transform-origin: right; }
+@keyframes transformation3 {
+  0% {
+    transform: scaleX(1); }
+  100% {
+    transform: scaleX(1.3); } }
   .slider .slide3 .falcon-bottom {
     position: absolute;
     top: 20%;
@@ -406,7 +466,9 @@ body .slider .slide1 {
     font-size: 12px; }
   body .slider .slide3 .astronautpic {
     height: 270px;
-    width: auto; } }
+    width: auto; }
+  body .slider .slide3 .block3 {
+    display: none; } }
 @media (max-width: 600px) {
   body .slider .slide3 .maintext {
     width: 80%;
@@ -554,6 +616,21 @@ body .slider .slide1 {
     width: 75%; } }
 .slider .slide5 {
   z-index: 2; }
+  .slider .slide5 .block5 {
+    position: absolute;
+    width: 14em;
+    height: 0.2em;
+    background-color: #4F91F3;
+    left: 56.5%;
+    bottom: -18%; }
+  .slider .slide5 .links:hover .block5 {
+    animation: transformation5 0.5s ease-in-out forwards;
+    transform-origin: right; }
+@keyframes transformation5 {
+  0% {
+    transform: scaleX(1); }
+  100% {
+    transform: scaleX(1.2); } }
   .slider .slide5 img {
     position: absolute;
     bottom: 0;
@@ -596,7 +673,8 @@ body .slider .slide1 {
   .slider .slide6 img {
     position: absolute;
     bottom: 0;
-    left: 2%; }
+    right: 0;
+    width: 27%; }
   .slider .slide6 .maintext {
     position: absolute;
     width: 500px;

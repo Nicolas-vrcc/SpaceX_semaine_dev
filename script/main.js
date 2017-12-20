@@ -381,3 +381,61 @@ window.addEventListener('mousewheel', (e) => {
     }
   }
 })
+
+// next / previous slide with keyboard arrays
+document.addEventListener('keydown', (e) => {
+  let position
+  if (e.keyCode == 39 || e.keyCode == 37) {
+    // right
+    for (let i = 0; i < slides.length; i++) {
+      // save current slide index
+      if (slides[i].classList.contains('active')) {
+        position = i
+      }
+      if (e.keyCode == 39) {
+        if (i < slides.length && i == position + 1) {
+          // remove current slide
+          slides[i - 1].classList.remove('active')
+          slideButtons[i - 1].classList.remove('clickedbtn')
+          slides[i - 1].style.display = 'none'
+          // display next slide
+          slides[i].style.display = 'block'
+          slides[i].classList.add('active')
+          slideButtons[i].classList.add('clickedbtn')
+          // transition background
+          if (i == 2 || i == 3) {
+            document.body.style.backgroundColor = 'black'
+          } else {
+            document.body.style.backgroundColor = '#F8F8F8'
+          }
+        }
+      }
+    }
+
+    // left
+    for (let i = slides.length - 1; i >= 0; i--) {
+      // save current slide index
+      if (slides[i].classList.contains('active')) {
+        position = i
+      }
+      if (e.keyCode == 37) {
+        if (i >= 0 && i == position - 1) {
+          // remove current slide
+          slides[i + 1].classList.remove('active')
+          slideButtons[i + 1].classList.remove('clickedbtn')
+          slides[i + 1].style.display = 'none'
+          // display next slide
+          slides[i].style.display = 'block'
+          slides[i].classList.add('active')
+          slideButtons[i].classList.add('clickedbtn')
+          // transition background
+          if (i == 2 || i == 3) {
+            document.body.style.backgroundColor = 'black'
+          } else {
+            document.body.style.backgroundColor = '#F8F8F8'
+          }
+        }
+      }
+    }
+  }
+})

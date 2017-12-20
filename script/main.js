@@ -255,12 +255,12 @@ const elementDragSlide2 = (e) => {
   }
 
 const closeDragSlide2Element = () => {
-    /* stop moving when mouse button is released:*/
-    document.onmouseup = null;
-    document.onmousemove = null;
-  }
+  /* stop moving when mouse button is released:*/
+  document.onmouseup = null;
+  document.onmousemove = null;
+}
 
-  dragElementSlide2(buttonSlide2)
+dragElementSlide2(buttonSlide2)
 
 // make rocket land on scroll on slide3
 let rocketpos = 0
@@ -307,7 +307,7 @@ window.addEventListener('mousewheel', (e) => {
           textMission.style.transform = `translateY(${textpos}px)`
           // Second text disappearing if the first is up
           if (textpos <= 220) {
-            for(const textMission2 of textMissions2) {
+            for (const textMission2 of textMissions2) {
               textMission2.style.opacity = '0'
             }
           }
@@ -345,9 +345,67 @@ window.addEventListener('mousewheel', (e) => {
           textMission.style.transform = `translateY(${textpos}px)`
           // Second text appearing if the first is down
           if (textpos >= 220) {
-            for(const textMission2 of textMissions2) {
+            for (const textMission2 of textMissions2) {
               textMission2.style.opacity = '1'
             }
+          }
+        }
+      }
+    }
+  }
+})
+
+// next / previous slide with keyboard arrays
+document.addEventListener('keydown', (e) => {
+  let position
+  if (e.keyCode == 39 || e.keyCode == 37) {
+    // right
+    for (let i = 0; i < slides.length; i++) {
+      // save current slide index
+      if (slides[i].classList.contains('active')) {
+        position = i
+      }
+      if (e.keyCode == 39) {
+        if (i < slides.length && i == position + 1) {
+          // remove current slide
+          slides[i - 1].classList.remove('active')
+          slideButtons[i - 1].classList.remove('clickedbtn')
+          slides[i - 1].style.display = 'none'
+          // display next slide
+          slides[i].style.display = 'block'
+          slides[i].classList.add('active')
+          slideButtons[i].classList.add('clickedbtn')
+          // transition background
+          if (i == 2 || i == 3) {
+            document.body.style.backgroundColor = 'black'
+          } else {
+            document.body.style.backgroundColor = '#F8F8F8'
+          }
+        }
+      }
+    }
+
+    // left
+    for (let i = slides.length - 1; i >= 0; i--) {
+      // save current slide index
+      if (slides[i].classList.contains('active')) {
+        position = i
+      }
+      if (e.keyCode == 37) {
+        if (i >= 0 && i == position - 1) {
+          // remove current slide
+          slides[i + 1].classList.remove('active')
+          slideButtons[i + 1].classList.remove('clickedbtn')
+          slides[i + 1].style.display = 'none'
+          // display next slide
+          slides[i].style.display = 'block'
+          slides[i].classList.add('active')
+          slideButtons[i].classList.add('clickedbtn')
+          // transition background
+          if (i == 2 || i == 3) {
+            document.body.style.backgroundColor = 'black'
+          } else {
+            document.body.style.backgroundColor = '#F8F8F8'
           }
         }
       }

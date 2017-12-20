@@ -119,7 +119,8 @@ slideButtons.forEach((button) => {
         slides[i].style.display = 'block'
         slides[i].classList.add('active')
         slideButtons[i].classList.add('clickedbtn')
-        if(i == 2 || i == 3){
+        if (i >= 3){
+        // if(i == 2 || i == 3){
           document.body.style.backgroundColor = 'black'
         }
         else{

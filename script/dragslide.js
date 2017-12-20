@@ -1,19 +1,23 @@
-const dragElementslide = (elmnt) => {
+//get DOM elements
+const buttonSlide2 = document.querySelector('selector')
+const loadingBar = document.querySelector('selector');
+
+const dragElementslide2 = (elmnt) => {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-    elmnt.onmousedown = dragMouseDown
+    elmnt.onmousedown = dragMouseDownslide2
 }
 
-const dragMouseDown = (e) => {
+const dragMouseDownslide2 = (e) => {
     e = e || window.event;
     // get the mouse cursor position at startup:
     // pos3 = e.clientX;
     pos4 = e.clientY;
     document.onmouseup = closeDragElement;
     // call a function whenever the cursor moves:
-    document.onmousemove = elementDrag;
+    document.onmousemove = elementDragslide2;
   }
 let animationOn = true
-const elementDrag = (e) => {
+const elementDragslide2 = (e) => {
     e = e || window.event;
     // calculate the new cursor position:
     // pos1 = pos3 - e.clientX;

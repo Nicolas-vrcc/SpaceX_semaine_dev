@@ -1,12 +1,32 @@
 .slider {
     .slide6 {
       z-index: 2;
-      img{
+      .astro{
         position: absolute;
         bottom: 0;
         right: 0;
         width: 27%;
       }
+      .robot_body
+      {
+        position: absolute;
+        width: 35%;
+        bottom: 10%;
+      }
+      .robot
+      {
+        position: absolute;
+        width: 20%;
+        bottom: 35%;
+        left: -1%;
+        animation: headrotate 5s infinite;
+      }
+
+      @keyframes headrotate {
+        0% {transform: rotateY(-50deg)}
+        100% {transform: rotateY(50deg)}
+      }
+
       .maintext {
         position: absolute;
         width: 500px;

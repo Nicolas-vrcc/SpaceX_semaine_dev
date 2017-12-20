@@ -1,6 +1,14 @@
 .slider{
   .slide2{
-    z-index: 4;
+    z-index: 4;    
+    .engine{
+      width: 70%;
+      height: auto;
+      position: absolute;
+      top: -20em;
+      left: -20em;
+      transform: scale(0.55) rotate(-19deg);
+    }
     .maintext{
       position: absolute;
       width: 500px;
@@ -21,16 +29,12 @@
       }
 
     }
-    .engine{
-      position: absolute;
-      transform: scale(0.55) rotate(-19deg);
-      top: -53%;
-      left: -28%;
-    }
     .thermo{
+      width: 45em;
+      height: auto;
       position: absolute;
-      top: 8%;
-      left: 65%;
+      top: -1em;
+      right: -15em;
       transform: rotate(8deg);
     }
     .bold-text{

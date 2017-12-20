@@ -265,6 +265,13 @@ body .slider .slide1 {
 
 .slider .slide2 {
   z-index: 4; }
+  .slider .slide2 .engine {
+    width: 70%;
+    height: auto;
+    position: absolute;
+    top: -20em;
+    left: -20em;
+    transform: scale(0.55) rotate(-19deg); }
   .slider .slide2 .maintext {
     position: absolute;
     width: 500px;
@@ -281,15 +288,12 @@ body .slider .slide1 {
       margin-bottom: 1em;
       color: grey;
       line-height: 1.8em; }
-  .slider .slide2 .engine {
-    position: absolute;
-    transform: scale(0.55) rotate(-19deg);
-    top: -53%;
-    left: -28%; }
   .slider .slide2 .thermo {
+    width: 45em;
+    height: auto;
     position: absolute;
-    top: 8%;
-    left: 65%;
+    top: -1em;
+    right: -15em;
     transform: rotate(8deg); }
   .slider .slide2 .bold-text {
     font-weight: 900; }

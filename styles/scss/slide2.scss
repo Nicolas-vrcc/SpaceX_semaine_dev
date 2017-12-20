@@ -1,5 +1,11 @@
-.slider{
-  .slide2{
+@keyframes wave
+{
+  0% {transform: translateX(-40px)}
+  100% {transform: translateX(0px)}
+}
+
+.slider {
+  .slide2 {
     z-index: 4;
     .block2
     {
@@ -28,26 +34,30 @@
       left: -20em;
       transform: scale(0.55) rotate(-19deg);
     }
-    .maintext{
+
+    .maintext {
       position: absolute;
       width: 500px;
       height: 50%;
       top: 15%;
       left: calc(50% - 250px);
-      h1{
+
+      h1 {
         font-family: NexaHeavy;
         font-size: 2em;
         color: $blue;
         margin-bottom: 1em;
       }
-      p{
+
+      p {
         font-family: NexaLight;
         margin-bottom: 1em;
         color: grey;
         line-height: 1.8em;
       }
     }
-    .thermo{
+
+    .thermo {
       width: 8em;
       height: auto;
       position: absolute;
@@ -56,34 +66,35 @@
       transform: rotate(8deg);
       pointer-events: none;
     }
-    .bold-text{
+
+    .bold-text {
       font-weight: 900;
     }
-    .grabbutton{
-    position: absolute;
-    top: 70%;
-    right: 20%;
-    width: 50px;
-    height: 50px;
-    background-color: lightgrey;
-    border-radius: 100%;
-    cursor: pointer;
+
+    .grabbutton {
+      position: absolute;
+      top: 70%;
+      right: 20%;
+      width: 50px;
+      height: 50px;
+      background-color: lightgrey;
+      border-radius: 100%;
+      cursor: pointer;
     }
-    .progressbar{
-    position: absolute;
-    top: 75%;
-    right: calc(15% - 5px);
-    width: 50px;
-    height: 50px;
-    background-color: $blue;
-    transform-origin: bottom;
-    z-index: -1;
-    // transition: transform 0.1s ease;
+
+    .progressbar {
+      position: absolute;
+      top: 75%;
+      right: calc(15% - 5px);
+      width: 50px;
+      height: 50px;
+      background-color: $blue;
+      transform-origin: bottom;
+      z-index: -1;
 
     }
   }
 }
-
 @media (max-width: 800px) {
   body {
     .slider {
@@ -93,15 +104,18 @@
             margin-top: 3em;
             margin-bottom: 2em;
           }
+
           p {
             font-size: 12px;
           }
         }
+
         .engine {
           width: 42em;
         }
-          .thermo {
-            display: none;
+
+        .thermo {
+          display: none;
         }
         .block2
         {
@@ -111,7 +125,6 @@
     }
   }
 }
-
 @media (max-width: 600px) {
   body {
     .slider {

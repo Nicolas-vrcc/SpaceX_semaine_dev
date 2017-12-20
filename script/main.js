@@ -15,6 +15,16 @@ const rocketInside = document.querySelector('.rocketthrough')
 const buttonSlide2 = document.querySelector('.grabbutton')
 const loadingBar = document.querySelector('.progressbar');
 //slide3
+const slide3 = document.querySelector('.slide3')
+const button1Slide3 = slide3.querySelector('.button1')
+const hiddenText1 = slide3.querySelector('.hidden-text1')
+const button2Slide3 = slide3.querySelector('.button2')
+const hiddenText2 = slide3.querySelector('.hidden-text2')
+const line1 = slide3.querySelector('.line1')
+const line2 = slide3.querySelector('.line2')
+const line3 = slide3.querySelector('.line3')
+const line4 = slide3.querySelector('.line4')
+//slide4
 const slide4 = document.querySelector('.slide4')
 const scrollDownText = slide4.querySelector('.scroll-down-container')
 const rocketPicture = slide4.querySelector('.bfr')
@@ -23,6 +33,35 @@ const rocketLeg2 = slide4.querySelector('.leg2')
 const textMissions = slide4.querySelectorAll('.text-missions')
 const textMissions2 = slide4.querySelectorAll('.text-missions2')
 //slide4
+
+// Buttons on Slide3 that allows the hidden text to appear on click
+button1Slide3.addEventListener('click', (event) => {
+  if(hiddenText1.classList.contains('hidden')) {
+    hiddenText1.style.opacity = "1"
+    line1.style.opacity = "1"
+    line2.style.opacity = "1"
+    hiddenText1.classList.remove('hidden')
+  } else {
+    hiddenText1.style.opacity = "0"
+    line1.style.opacity = "0"
+    line2.style.opacity = "0"
+    hiddenText1.classList.add('hidden')
+  }
+})
+
+button2Slide3.addEventListener('click', (event) => {
+  if(hiddenText2.classList.contains('hidden')) {
+    hiddenText2.style.opacity = "1"
+    line3.style.opacity = "1"
+    line4.style.opacity = "1"
+    hiddenText2.classList.remove('hidden')
+  } else {
+    hiddenText2.style.opacity = "0"
+    line3.style.opacity = "0"
+    line4.style.opacity = "0"
+    hiddenText2.classList.add('hidden')
+  }
+})
 
 console.log(buttonSlide2);
 console.log(loadingBar);

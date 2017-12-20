@@ -222,6 +222,34 @@ body .slider {
     width: 100%;
     height: 100%;
     background-color: black; }
+  body .slider .texthover {
+    width: 50px;
+    height: auto;
+    padding: 4px;
+    position: absolute;
+    top: 90%;
+    left: calc(24% - 24px);
+    z-index: 5;
+    text-align: center;
+    color: lightgrey;
+    font-family: NexaLight;
+    font-size: 14px;
+    opacity: 0;
+    transform: translateY(0);
+    transition: opacity 0.8s ease, transform 0.8s ease; }
+  body .slider .texthover1 {
+    left: calc(24% - 24px); }
+  body .slider .texthover2 {
+    left: calc(33% - 33px); }
+  body .slider .texthover3 {
+    left: calc(43% - 43px); }
+  body .slider .texthover4 {
+    left: calc(55% - 55px); }
+  body .slider .texthover5 {
+    width: 90px;
+    left: calc(65% - 65px); }
+  body .slider .texthover6 {
+    left: calc(76% - 76px); }
   body .slider .slidermenu {
     z-index: 6;
     position: absolute;

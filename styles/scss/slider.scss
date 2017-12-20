@@ -102,6 +102,41 @@ body{
     height: 100%;
     background-color: black;
   }
+  .texthover{
+    width: 50px;
+    height: auto;
+    padding: 4px;
+    position: absolute;
+    top: 90%;
+    left: calc(24% - 24px);
+    z-index: 5;
+    text-align: center;
+    color: lightgrey;
+    font-family: NexaLight;
+    font-size: 14px;
+    opacity: 0;
+    transform: translateY(0);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .texthover1{
+    left: calc(24% - 24px);
+  }
+  .texthover2{
+    left: calc(33% - 33px);
+  }
+  .texthover3{
+    left: calc(43% - 43px);
+  }
+  .texthover4{
+    left: calc(55% - 55px);
+  }
+  .texthover5{    
+    width: 90px;
+    left: calc(65% - 65px);
+  }
+  .texthover6{
+    left: calc(76% - 76px);
+  }
   .slidermenu{
     z-index: 6;
     position: absolute;

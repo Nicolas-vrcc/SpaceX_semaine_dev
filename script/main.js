@@ -7,13 +7,14 @@ const startBtn = homePage.querySelector('.startbtn')
 const mainSlider = document.querySelector('.slider')
 const slides = document.querySelectorAll('.slide')
 const slideButtons = document.querySelectorAll('.circle')
+const textHover = document.querySelectorAll('.texthover')
 //slide1
 const rocketTop = document.querySelector('.rockettop');
 const rocketBottom = document.querySelector('.rocketbottom')
 const rocketInside = document.querySelector('.rocketthrough')
 //slide2
 const buttonSlide2 = document.querySelector('.grabbutton')
-const loadingBar = document.querySelector('.progressbar');
+const loadingBar = document.querySelector('.progressbar')
 //slide3
 const slide3 = document.querySelector('.slide3')
 const button1Slide3 = slide3.querySelector('.button1')
@@ -32,7 +33,7 @@ const rocketLeg1 = slide4.querySelector('.leg1')
 const rocketLeg2 = slide4.querySelector('.leg2')
 const textMissions = slide4.querySelectorAll('.text-missions')
 const textMissions2 = slide4.querySelectorAll('.text-missions2')
-//slide4
+
 
 // Buttons on Slide3 that allows the hidden text to appear on click
 button1Slide3.addEventListener('click', (event) => {
@@ -63,11 +64,34 @@ button2Slide3.addEventListener('click', (event) => {
   }
 })
 
+// Description appearing over the circles with mouseenter event
+for (let i = 0; i < slideButtons.length; i++) {
+  slideButtons[i].addEventListener('mouseenter', (event) => {
+    for (let j = 0; j < textHover.length; j++) {
+      if (i == j) {
+        textHover[j].style.opacity = "1"
+        textHover[j].style.transform = "translateY(-15px)"
+      }
+    }
+  })
+  // Description disappearing over the circles with mouseleave event
+  slideButtons[i].addEventListener('mouseleave', (event) => {
+    for (let j = 0; j < textHover.length; j++) {
+      if (i == j) {
+        textHover[j].style.opacity = "0"
+        textHover[j].style.transform = "translateY(0)"
+      }
+    }
+  })
+}
+
 console.log(buttonSlide2);
 console.log(loadingBar);
 // disable image dragging
-allImg.forEach((img) =>{
-  img.ondragstart = function() { return false }
+allImg.forEach((img) => {
+  img.ondragstart = function () {
+    return false
+  }
 })
 
 // handle the cool cursor
@@ -77,51 +101,49 @@ let speedX = 4
 let speedY = 4
 const event = 0
 
-document.addEventListener('mousemove', (event) =>
-{
-    const mouse = {x: event.clientX, y:event.clientY}
+document.addEventListener('mousemove', (event) => {
+  const mouse = {
+    x: event.clientX,
+    y: event.clientY
+  }
 
-    speedX += (mouse.x - speedX) * 0.35
-    speedY += (mouse.y - speedY) * 0.35
+  speedX += (mouse.x - speedX) * 0.35
+  speedY += (mouse.y - speedY) * 0.35
 
-    $cursor.style.top = speedY - 15 + 'px'
-    $cursor.style.left = speedX - 15 + 'px'
+  $cursor.style.top = speedY - 15 + 'px'
+  $cursor.style.left = speedX - 15 + 'px'
 
-    if (mouse.x > 300 && mouse.x < 1000)
-    {
-        $cursor.classList.add('mousedown')
-    }
-    else
-    {
-        $cursor.classList.remove('mousedown')
-    }
-    // $cursor.classList.add('mousemove')
-    // setTimeout(() => {
-    //     $cursor.classList.remove('mousemove')
-    // }, 1000)
+  if (mouse.x > 300 && mouse.x < 1000) {
+    $cursor.classList.add('mousedown')
+  } else {
+    $cursor.classList.remove('mousedown')
+  }
+  // $cursor.classList.add('mousemove')
+  // setTimeout(() => {
+  //     $cursor.classList.remove('mousemove')
+  // }, 1000)
 
 })
 $cursor.style.top = event.clientY + 20 + 'px'
 $cursor.style.left = event.clientX + 20 + 'px'
 
 
-document.addEventListener('mousedown', (event) =>
-{
-    const mouse = {x: event.clientX, y:event.clientY}
-    if ($cursor.classList.contains('mousedown'))
-    {
-        $cursor.classList.add('click')
-        setTimeout(() => {
-        $cursor.classList.remove('click')
-        }, 400)
-    }
-    else
-    {
-        $cursor.classList.add('click2')
-        setTimeout(() => {
-        $cursor.classList.remove('click2')
-        }, 400)
-    }
+document.addEventListener('mousedown', (event) => {
+  const mouse = {
+    x: event.clientX,
+    y: event.clientY
+  }
+  if ($cursor.classList.contains('mousedown')) {
+    $cursor.classList.add('click')
+    setTimeout(() => {
+      $cursor.classList.remove('click')
+    }, 400)
+  } else {
+    $cursor.classList.add('click2')
+    setTimeout(() => {
+      $cursor.classList.remove('click2')
+    }, 400)
+  }
 })
 
 // event listeners
@@ -158,10 +180,9 @@ slideButtons.forEach((button) => {
         slides[i].style.display = 'block'
         slides[i].classList.add('active')
         slideButtons[i].classList.add('clickedbtn')
-        if(i == 3 || i == 4 || i == 5){
+        if (i == 3 || i == 4 || i == 5) {
           document.body.style.backgroundColor = 'black'
-        }
-        else{
+        } else {
           document.body.style.backgroundColor = '#F8F8F8'
         }
       }
@@ -171,88 +192,94 @@ slideButtons.forEach((button) => {
 
 // HANDLE DRAG on slide1
 const dragElement = (elmnt) => {
-  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-    elmnt.onmousedown = dragMouseDown
+  var pos1 = 0,
+    pos2 = 0,
+    pos3 = 0,
+    pos4 = 0;
+  elmnt.onmousedown = dragMouseDown
 }
 
 const dragMouseDown = (e) => {
-    e = e || window.event;
-    // get the mouse cursor position at startup:
-    // pos3 = e.clientX;
-    pos4 = e.clientY;
-    document.onmouseup = closeDragElement;
-    // call a function whenever the cursor moves:
-    document.onmousemove = elementDrag;
-  }
+  e = e || window.event;
+  // get the mouse cursor position at startup:
+  // pos3 = e.clientX;
+  pos4 = e.clientY;
+  document.onmouseup = closeDragElement;
+  // call a function whenever the cursor moves:
+  document.onmousemove = elementDrag;
+}
 let animationOn = true
 const elementDrag = (e) => {
-    e = e || window.event;
-    // calculate the new cursor position:
-    // pos1 = pos3 - e.clientX;
-    pos2 = pos4 - e.clientY;
-    // pos3 = e.clientX;
-    pos4 = e.clientY;
-    // set the element's new position:
-    if(rocketBottom.offsetTop - pos2 > 250 && rocketBottom.offsetTop - pos2 < 380 && animationOn){
+  e = e || window.event;
+  // calculate the new cursor position:
+  // pos1 = pos3 - e.clientX;
+  pos2 = pos4 - e.clientY;
+  // pos3 = e.clientX;
+  pos4 = e.clientY;
+  // set the element's new position:
+  if (rocketBottom.offsetTop - pos2 > 250 && rocketBottom.offsetTop - pos2 < 380 && animationOn) {
     rocketBottom.style.top = (rocketBottom.offsetTop - pos2) + "px";
     // rocketBottom.style.left = (rocketBottom.offsetLeft - pos1) + "px";
-    }
-    if(rocketBottom.offsetTop - pos2 < 250){
-      rocketInside.style.opacity = 0.8
-      rocketBottom.style.opacity = 0.3
-      rocketTop.style.opacity = 0.8
-      animationOn = false
-    }
   }
+  if (rocketBottom.offsetTop - pos2 < 250) {
+    rocketInside.style.opacity = 0.8
+    rocketBottom.style.opacity = 0.3
+    rocketTop.style.opacity = 0.8
+    animationOn = false
+  }
+}
 
 const closeDragElement = () => {
-    /* stop moving when mouse button is released:*/
-    document.onmouseup = null;
-    document.onmousemove = null;
-  }
+  /* stop moving when mouse button is released:*/
+  document.onmouseup = null;
+  document.onmousemove = null;
+}
 
-  dragElement(rocketBottom)
+dragElement(rocketBottom)
 
 // HANDLE DRAG fuel slide 2
 
 const dragElementSlide2 = (elmnt) => {
   console.log(elmnt);
-  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-    elmnt.onmousedown = dragMouseDownSlide2
+  var pos1 = 0,
+    pos2 = 0,
+    pos3 = 0,
+    pos4 = 0;
+  elmnt.onmousedown = dragMouseDownSlide2
 }
 
 const dragMouseDownSlide2 = (e) => {
-    e = e || window.event;
-    // get the mouse cursor position at startup:
-    // pos3 = e.clientX;
-    pos4 = e.clientY;
-    document.onmouseup = closeDragSlide2Element;
-    // call a function whenever the cursor moves:
-    document.onmousemove = elementDragSlide2;
-  }
+  e = e || window.event;
+  // get the mouse cursor position at startup:
+  // pos3 = e.clientX;
+  pos4 = e.clientY;
+  document.onmouseup = closeDragSlide2Element;
+  // call a function whenever the cursor moves:
+  document.onmousemove = elementDragSlide2;
+}
 let animation2On = true
 const elementDragSlide2 = (e) => {
-    e = e || window.event;
-    // calculate the new cursor position:
-    // pos1 = pos3 - e.clientX;
-    pos2 = pos4 - e.clientY;
-    // pos3 = e.clientX;
-    pos4 = e.clientY;
-    // set the element's new position:
-    if(buttonSlide2.offsetTop - pos2 > 200 && buttonSlide2.offsetTop - pos2 < 510 && animation2On){
+  e = e || window.event;
+  // calculate the new cursor position:
+  // pos1 = pos3 - e.clientX;
+  pos2 = pos4 - e.clientY;
+  // pos3 = e.clientX;
+  pos4 = e.clientY;
+  // set the element's new position:
+  if (buttonSlide2.offsetTop - pos2 > 200 && buttonSlide2.offsetTop - pos2 < 510 && animation2On) {
     buttonSlide2.style.top = (buttonSlide2.offsetTop - pos2) + "px"
     let clearPosition = buttonSlide2.offsetTop - pos2
     let transforBar = (1 - ((clearPosition - 200) / (500 - 200))) * 10
-    if(transforBar > 10){
+    if (transforBar > 10) {
       transforBar = 10
     }
-    if(transforBar < 0){
+    if (transforBar < 0) {
       transforBar = 0
     }
-    console.log('position : ' + clearPosition,'clear value: ' + transforBar)
+    console.log('position : ' + clearPosition, 'clear value: ' + transforBar)
     loadingBar.style.transform = `rotate(8deg) scaleY(${transforBar})`
   }
-  }
+}
 
 const closeDragSlide2Element = () => {
   /* stop moving when mouse button is released:*/

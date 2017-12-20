@@ -67,7 +67,6 @@ body {
     width: 100%;
     height: calc(100% + 1px);
     z-index: 8;
-    display: none;
     overflow: hidden;
     background-image: url(../images/bck.png);
     background-size: cover;
@@ -248,7 +247,7 @@ body .slider .slide1 {
       margin-bottom: 1em;
       color: grey;
       line-height: 1.8em; }
-  .slider .slide1 .astronautpic {
+  body .slider .slide1 .astronautpic {
     height: auto;
     width: 25%;
     position: absolute;

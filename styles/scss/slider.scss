@@ -30,6 +30,41 @@ body{
   .slide{
     opacity: 0;
     display: none;
+
+    .links
+    {
+      font-family: NexaLight;
+      color: grey;
+      font-size: 0.96em;
+      text-align: right;
+      margin-top: 3em;
+      text-decoration: none;
+    }
+    .links:hover
+    {
+      cursor: pointer;
+    }
+
+    .links:hover .block
+    {
+      animation: transformation 0.5s ease-in-out forwards;
+      transform-origin: right;
+    }
+
+    @keyframes transformation {
+    0% {transform: scaleX(1)}
+    100% {transform: scaleX(1.3)}
+    }
+
+    .block
+    {
+      position: absolute;
+      width: 10em;
+      height: 0.2em;
+      background-color: $blue;
+      left: 70%;
+      bottom: -18%;
+    }
   }
   .slide1{
   position: absolute;

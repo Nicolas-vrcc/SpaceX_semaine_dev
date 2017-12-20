@@ -31,6 +31,26 @@ body{
     opacity: 0;
     display: none;
 
+    .links-box
+    {
+      position: relative;
+      right:0;
+      text-align: right;
+      margin-top: 5em;
+    }
+
+    .links-box:hover .block
+    {
+      animation: translatebox 2s ease-in;
+      transform-origin: right;
+    }
+
+    @keyframes translatebox {
+      0% {transform: scaleX(1)}
+      20% {transform: scaleX(1.2)}
+      100% {transform: scaleX(1)}
+    }
+
     .links
     {
       font-family: NexaLight;
@@ -39,6 +59,15 @@ body{
       text-align: right;
       margin-top: 3em;
       text-decoration: none;
+    }
+    .block
+    {
+      position: absolute;
+      width: 12em;
+      height: 0.2em;
+      background-color: $blue;
+      left: 62%;
+      margin-top: 1%;
     }
     .links:hover
     {
@@ -56,15 +85,6 @@ body{
     100% {transform: scaleX(1.3)}
     }
 
-    .block
-    {
-      position: absolute;
-      width: 10em;
-      height: 0.2em;
-      background-color: $blue;
-      left: 70%;
-      bottom: -18%;
-    }
   }
   .slide1{
   position: absolute;
@@ -107,7 +127,7 @@ body{
     height: auto;
     padding: 4px;
     position: absolute;
-    top: 90%;
+    top: 87%;
     left: calc(24% - 24px);
     z-index: 5;
     text-align: center;

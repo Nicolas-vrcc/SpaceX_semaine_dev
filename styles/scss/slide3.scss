@@ -80,11 +80,17 @@
         color: grey;
         line-height: 1.8em;
       }
-      .hidden-text1 {
+      .hidden-text1.hidden {
         opacity: 0;
       }
-      .hidden-text2 {
+      .hidden-text2.hidden {
         opacity: 0;
+      }
+      .hidden-text1 {
+        opacity: 1;
+      }
+      .hidden-text2 {
+        opacity: 1;
       }
     }
     .falcon9 {

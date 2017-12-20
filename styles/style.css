@@ -194,13 +194,13 @@ body .slider {
     width: 50%;
     height: 100px; }
     body .slider .slidermenu .circle {
-      width: 20px;
+      min-width: 20px;
       height: 20px;
       border-radius: 100%;
       border: 2px solid lightgrey;
       cursor: pointer; }
     body .slider .slidermenu .decorationcircle {
-      width: 10px;
+      min-width: 10px;
       height: 10px;
       background-color: lightgrey;
       border-radius: 100%; }

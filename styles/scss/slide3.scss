@@ -54,3 +54,43 @@
       }
     }
   }
+
+  @media (max-width: 800px) {
+    body {
+      .slider {
+        .slide3 {
+          .maintext {
+            h1 {
+              margin-top: 2em;            
+              margin-bottom: 2em;
+            }
+            p {
+              font-size: 12px;
+            }
+          }
+          .astronautpic {
+            height: 270px;
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 600px) {
+    body {
+      .slider {
+        .slide3 {
+          .maintext {
+            width: 80%;
+            height: auto;
+            top: 5%;
+            left: 10%;
+          }
+          .rocketcontainer {
+            display: none;
+          }
+        }
+      }
+    }
+  }

@@ -15,11 +15,13 @@ const rocketInside = document.querySelector('.rocketthrough')
 const buttonSlide2 = document.querySelector('.grabbutton')
 const loadingBar = document.querySelector('.progressbar');
 //slide3
-const slide3 = document.querySelector('.slide3')
-const button1Slide3 = slide3.querySelector('.button1')
-const hiddenText1 = slide3.querySelector('.hidden-text1')
-const button2Slide3 = slide3.querySelector('.button2')
-const hiddenText2 = slide3.querySelector('.hidden-text2')
+const slide4 = document.querySelector('.slide4')
+const scrollDownText = slide4.querySelector('.scroll-down-container')
+const rocketPicture = slide4.querySelector('.bfr')
+const rocketLeg1 = slide4.querySelector('.leg1')
+const rocketLeg2 = slide4.querySelector('.leg2')
+const textMissions = slide4.querySelectorAll('.text-missions')
+const textMissions2 = slide4.querySelectorAll('.text-missions2')
 //slide4
 const slide4 = document.querySelector('.slide4')
 const scrollDownText = slide4.querySelector('.scroll-down-container')
@@ -146,7 +148,7 @@ slideButtons.forEach((button) => {
         slides[i].style.display = 'block'
         slides[i].classList.add('active')
         slideButtons[i].classList.add('clickedbtn')
-        if(i == 2 || i == 3){
+        if(i == 3 || i == 4 || i == 5){
           document.body.style.backgroundColor = 'black'
         }
         else{
@@ -230,9 +232,15 @@ const elementDragSlide2 = (e) => {
     if(buttonSlide2.offsetTop - pos2 > 200 && buttonSlide2.offsetTop - pos2 < 510 && animation2On){
     buttonSlide2.style.top = (buttonSlide2.offsetTop - pos2) + "px"
     let clearPosition = buttonSlide2.offsetTop - pos2
-    let transforBar = ((clearPosition - 200) / (500 - 200)) * 10
+    let transforBar = (1 - ((clearPosition - 200) / (500 - 200))) * 10
+    if(transforBar > 10){
+      transforBar = 10
+    }
+    if(transforBar < 0){
+      transforBar = 0
+    }
     console.log('position : ' + clearPosition,'clear value: ' + transforBar)
-    loadingBar.style.transform = `scaleY(${transforBar})`
+    loadingBar.style.transform = `rotate(8deg) scaleY(${transforBar})`
   }
   }
 
@@ -261,7 +269,7 @@ window.addEventListener('mousewheel', (e) => {
     if (e.wheelDelta >= 0) {
       if (rocketpos >= 0) {
         // Moving up the rocket position
-        rocketpos -= 10
+        rocketpos -= 8
         legpos -= 10
         rocketPicture.style.transform = `translateY(${rocketpos}px)`
         // rectracting the legs with transform

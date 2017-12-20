@@ -1,29 +1,33 @@
 .slider {
-  .slide4 {
-    z-index: 2;
-    img{
-      position: absolute;
-      bottom: 0;
-      left: 2%;
-    }
-    .maintext {
-      position: absolute;
-      width: 500px;
-      height: 50%;
-      top: 20%;
-      left: calc(50% - 250px);
-      h1 {
-        font-family: NexaHeavy;
-        font-size: 2em;
-        color: $blue;
-        margin-bottom: 1em;
+    .slide4 {
+      z-index: 2;
+      .falcon-anim{
+        position: absolute;
+        width: 400px;
+        height: 500px;
+        border: 1px white solid;
       }
-      p {
-        font-family: NexaLight;
-        margin-bottom: 1em;
-        color: grey;
-        line-height: 1.8em;
+      img{
+        display: none;
+      }
+      .maintext {
+        position: absolute;
+        width: 500px;
+        height: 50%;
+        top: 20%;
+        left: calc(50% - 250px);
+        h1 {
+          font-family: NexaHeavy;
+          font-size: 2em;
+          color: $blue;
+          margin-bottom: 1em;
+        }
+        p {
+          font-family: NexaLight;
+          margin-bottom: 1em;
+          color: grey;
+          line-height: 1.8em;
+        }
       }
     }
   }
-}

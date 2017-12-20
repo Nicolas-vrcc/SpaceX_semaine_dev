@@ -306,20 +306,20 @@ window.addEventListener('mousewheel', (e) => {
     if (e.wheelDelta >= 0) {
       if (rocketpos >= 0) {
         // Moving up the rocket position
-        rocketpos -= 8
-        legpos -= 10
+        rocketpos -= 20
+        legpos -= 20
         rocketPicture.style.transform = `translateY(${rocketpos}px)`
         // rectracting the legs with transform
         if (legpos >= 360 && legpos <= 380) {
           rotateleg1 -= 8
           rotateleg2 += 8
-          legpos -= 12
+          legpos -= 22
           rocketLeg1.style.transform = `translateY(${legpos}px) rotate(${rotateleg1}deg) translateX(8px)`
           rocketLeg2.style.transform = `translateY(${legpos}px) rotate(${rotateleg2}deg) translateX(-8px)`
         } else if (legpos > 380) {
-          rotateleg1 -= 8
-          rotateleg2 += 8
-          legpos -= 17
+          rotateleg1 -= 10
+          rotateleg2 += 10
+          legpos -= 22
           rocketLeg1.style.transform = `translateY(${legpos}px) rotate(${rotateleg1}deg) translateX(15px)`
           rocketLeg2.style.transform = `translateY(${legpos}px) rotate(${rotateleg2}deg) translateX(-15px)`
         } else {

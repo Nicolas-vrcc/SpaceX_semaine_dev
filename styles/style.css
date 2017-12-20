@@ -387,11 +387,56 @@ body .slider .slide1 {
     position: absolute;
     top: 35%;
     background: #696161;
-    border-radius: 2em; }
+    border-radius: 2em;
+    z-index: 3; }
   .slider .slide3 .button1 {
     left: 20%; }
   .slider .slide3 .button2 {
     right: 20%; }
+  .slider .slide3 .lines {
+    width: 6em;
+    height: 4em;
+    position: absolute;
+    top: 39%;
+    left: 22%; }
+    .slider .slide3 .lines .line1 {
+      width: 2px;
+      height: 1.7em;
+      position: absolute;
+      background: black;
+      transform: rotate(-40deg);
+      z-index: 2;
+      opacity: 0; }
+    .slider .slide3 .lines .line2 {
+      width: 2px;
+      height: 4em;
+      position: absolute;
+      margin-top: -8%;
+      background: black;
+      transform: rotate(90deg) translateY(-40px);
+      opacity: 0; }
+  .slider .slide3 .lines2 {
+    width: 6em;
+    height: 4em;
+    position: absolute;
+    top: 39%;
+    right: 15%; }
+    .slider .slide3 .lines2 .line3 {
+      width: 2px;
+      height: 6.5em;
+      position: absolute;
+      background: black;
+      transform: rotate(20deg);
+      z-index: 2;
+      opacity: 0; }
+    .slider .slide3 .lines2 .line4 {
+      width: 2px;
+      height: 4em;
+      position: absolute;
+      margin-top: 70%;
+      background: black;
+      transform: rotate(90deg) translateY(48px);
+      opacity: 0; }
   .slider .slide3 .maintext {
     position: absolute;
     width: 500px;

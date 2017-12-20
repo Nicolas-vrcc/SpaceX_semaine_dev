@@ -12,12 +12,14 @@
         position: absolute;
         width: 35%;
         bottom: 10%;
+        left: -4.7%;
+        z-index: 10;
       }
       .robot
       {
         position: absolute;
         width: 20%;
-        bottom: 35%;
+        bottom: 38%;
         left: -1%;
         animation: headrotate 5s infinite;
       }

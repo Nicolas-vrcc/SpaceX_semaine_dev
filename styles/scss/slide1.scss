@@ -1,5 +1,6 @@
 .slider{
   .slide1{
+    z-index: 5;
     .maintext{
       position: absolute;
       width: 500px;
@@ -25,6 +26,6 @@
       position: absolute;
       bottom: -5px;
     }
-    
+
   }
 }

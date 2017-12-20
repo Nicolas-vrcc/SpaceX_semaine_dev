@@ -1,5 +1,6 @@
 .slider{
   .slide3{
+    z-index: 3;
     .mars{
       position: absolute;
       top: 20%;
@@ -15,17 +16,17 @@
       -moz-animation-iteration-count: infinite;
       -moz-animation-timing-function: ease-in-out;
     }
-  
+
   @-webkit-keyframes Floatingx{
       from {-webkit-transform:translate(0, 0px);}
       65% {-webkit-transform:translate(0, 3px);}
-      to {-webkit-transform: translate(0, -0px);}    
+      to {-webkit-transform: translate(0, -0px);}
   }
-      
+
   @-moz-keyframes Floating{
       from {-moz-transform:translate(0, 0px);}
       65% {-moz-transform:translate(0, 3px);}
-      to {-moz-transform: translate(0, -0px);}    
+      to {-moz-transform: translate(0, -0px);}
   }
     .maintext{
       position: absolute;

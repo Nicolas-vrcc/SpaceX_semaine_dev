@@ -1,15 +1,21 @@
 // get DOM elements
+const allImg = document.querySelectorAll('img');
 const homePage = document.querySelector('.home')
 const startBtn = homePage.querySelector('.startbtn')
 const mainSlider = document.querySelector('.slider')
 const slides = document.querySelectorAll('.slide')
 const slideButtons = document.querySelectorAll('.circle')
+const rocketBottom = document.querySelector('.rocketbottom')
 const slide3 = document.querySelector('.slide3')
 const scrollDownText = slide3.querySelector('.scroll-down-container')
 const rocketPicture = slide3.querySelector('.bfr')
 const rocketLeg1 = slide3.querySelector('.leg1')
 const rocketLeg2 = slide3.querySelector('.leg2')
 
+// disable image dragging
+allImg.forEach((img) =>{
+  img.ondragstart = function() { return false }
+})
 
 // event listeners
 startBtn.addEventListener('click', (e) => {
@@ -59,7 +65,16 @@ slideButtons.forEach((button) => {
     }
   })
 })
+//make rocket merge on slide 1 and displays the inside of it
+let slide1RocketPos = 0
+let lastClientY = 0
+rocketBottom.addEventListener('mousemove',(e)=>{
+  if(e.which == 1 && slide1RocketPos > -120){
+    rocketBottom.style.transform = `translateY(${slide1RocketPos}px)`
+    slide1RocketPos -= 3
 
+  }
+})
 // make rocket land on scroll on slide3
 let rocketpos = 0
 let legpos = 0

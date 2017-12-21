@@ -388,11 +388,11 @@ body .slider .slide1 {
 
 @media (max-width: 1450px) {
   body .slider .slide1 .parallax1 .layer1 {
-    margin-top: 5%;
+    margin-top: 15%;
     margin-left: -2em; } }
 @media (max-width: 1285px) {
   body .slider .slide1 .parallax1 .layer1 {
-    margin-top: 10%;
+    margin-top: 22%;
     margin-left: -2em; } }
 @media (max-width: 800px) {
   body .slider .slide1 .parallax1 .layer1 {

@@ -34,24 +34,7 @@ body {
           100% {transform: scaleX(1)}
         }
     
-        .links
-        {
-          font-family: NexaLight;
-          color: grey;
-          font-size: 0.96em;
-          text-align: right;
-          margin-top: 3em;
-          text-decoration: none;
-        }
-        .block
-        {
-          position: absolute;
-          width: 12em;
-          height: 0.2em;
-          background-color: $blue;
-          left: 62%;
-          margin-top: 1%;
-        }
+        
         .links:hover
         {
           cursor: pointer;

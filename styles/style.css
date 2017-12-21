@@ -337,20 +337,6 @@ body .slider .slide1 {
     transform: scaleX(1.2); }
   100% {
     transform: scaleX(1); } }
-    body .slider .slide1 .maintext .links {
-      font-family: NexaLight;
-      color: grey;
-      font-size: 0.96em;
-      text-align: right;
-      margin-top: 3em;
-      text-decoration: none; }
-    body .slider .slide1 .maintext .block {
-      position: absolute;
-      width: 12em;
-      height: 0.2em;
-      background-color: #4F91F3;
-      left: 62%;
-      margin-top: 1%; }
     body .slider .slide1 .maintext .links:hover {
       cursor: pointer; }
     body .slider .slide1 .maintext .links:hover .block {

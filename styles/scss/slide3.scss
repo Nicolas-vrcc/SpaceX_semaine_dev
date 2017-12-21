@@ -112,14 +112,17 @@
 @media (max-width: 1000px) {
   .dragon,
   .button,
-  .falcon9 {
+  .falcon9,
+  .block {
     display: none;
   }
   .slider {
     .slide3 {
       .maintext {
         .hidden-text1,
-        .hidden-text2 {
+        .hidden-text2,
+        .hidden-text1.hidden,
+        .hidden-text2.hidden {
           opacity: 1;
         }
       }

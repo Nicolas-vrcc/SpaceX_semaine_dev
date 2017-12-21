@@ -617,11 +617,14 @@ body .slider .slide1 {
 @media (max-width: 1000px) {
   .dragon,
   .button,
-  .falcon9 {
+  .falcon9,
+  .block {
     display: none; }
 
   .slider .slide3 .maintext .hidden-text1,
-  .slider .slide3 .maintext .hidden-text2 {
+  .slider .slide3 .maintext .hidden-text2,
+  .slider .slide3 .maintext .hidden-text1.hidden,
+  .slider .slide3 .maintext .hidden-text2.hidden {
     opacity: 1; } }
 @media (max-width: 800px) {
   body .slider .slide3 .maintext h1 {

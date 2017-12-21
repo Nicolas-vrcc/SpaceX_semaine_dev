@@ -1,6 +1,9 @@
 body {
   .slider {
     .slide1 {
+      a:hover .cursor{
+        transform: scale(3);
+    }
       display: block;
       z-index: 5;
       .maintext {

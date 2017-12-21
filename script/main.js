@@ -125,15 +125,20 @@ loop()
 
 document.addEventListener('mousedown', (event) =>
 {
-  $cursor.style.opacity = 0
+  $cursor.style.width = '50px'
+  $cursor.style.height = '50px'
+  $cursor.style.transition = 'width 0.2s ease-in-out, height 0.2s ease-in-out'
 })
 document.addEventListener('mouseup', (event) =>
 {
-  setTimeout(() =>
+  setTimeout(() => {
 
-  $cursor.style.opacity = 1
-  , 300)
+  $cursor.style.width = '30px'
+  $cursor.style.height = '30px'
+  }, 100)
 })
+
+
 
 // event listeners
 startBtn.addEventListener('click', (e) => {

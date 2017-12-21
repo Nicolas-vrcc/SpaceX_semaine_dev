@@ -16,6 +16,16 @@
     100% {transform : scale(1.3)}
 }
 body{
+    #active {
+        animation: click 2s linear;
+    }
+    
+    @keyframes click {
+        0% {transform: scale(1)}
+        50% {transform: scale(2)}
+        100% {transform: scale(1)}
+    }
+
   .cursor {
     position: absolute;
     width: 30px;
@@ -24,6 +34,7 @@ body{
     border: 1px solid #D3D3D3;
     z-index: 9999;
     pointer-events: none;
+  }
     .inside_cursor{
     position: relative;
     width: 6px;
@@ -32,15 +43,5 @@ body{
     background: #E4E4E4;
     top: 40%;
     left: 40%;
-}
-}
-.cursor.mousedown{
-    animation: mousedown 0.5s ease-in-out forwards;
-}
-.cursor.click{
-    animation: click 0.7s ease-out;
-}
-.cursor.click2{
-    animation: click2 0.7s ease-out;
-}
+    }
 }

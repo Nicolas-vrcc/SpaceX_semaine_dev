@@ -787,6 +787,10 @@ body .slider .slide1 {
       margin-bottom: 1em;
       color: grey;
       line-height: 1.8em; }
+  .slider .slide5 .marsplanet3d {
+    position: absolute;
+    top: -30px;
+    left: 65%; }
 
 @media (max-width: 800px) {
   body .slider .slide5 .maintext h1 {

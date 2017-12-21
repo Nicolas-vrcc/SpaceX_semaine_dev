@@ -488,21 +488,30 @@ body .slider .slide1 {
     will-change: transform;
     transform: rotate(8deg); }
   .slider .slide2 .parallax2 .layer1 {
-    width: 30em;
+    width: 33%;
     margin-top: -10%;
     margin-left: -5em; }
 
+@media (max-width: 1450px) {
+  body .slider .slide2 .parallax2 .layer1 {
+    margin-top: 5%;
+    margin-left: -2em; } }
+@media (max-width: 1285px) {
+  body .slider .slide2 .parallax2 .layer1 {
+    margin-top: -10%;
+    margin-left: -5%; } }
 @media (max-width: 800px) {
   body .slider .slide2 .maintext h1 {
     margin-top: 3em;
     margin-bottom: 2em; }
   body .slider .slide2 .maintext p {
     font-size: 12px; }
-  body .slider .slide2 .engine {
-    width: 42em; }
-  body .slider .slide2 .thermo {
-    display: none; }
-  body .slider .slide2 .block2 {
+  body .slider .slide2 .thermo,
+  body .slider .slide2 .block2,
+  body .slider .slide2 .rocketcontainer,
+  body .slider .slide2 .waves,
+  body .slider .slide2 .grabbutton,
+  body .slider .slide2 .progressbar {
     display: none; } }
 @media (max-width: 600px) {
   body .slider .slide2 .maintext {

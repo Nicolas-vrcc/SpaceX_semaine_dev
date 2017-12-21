@@ -108,13 +108,47 @@
   // Parallax 2 POSITION
     .parallax2{
       .layer1{
-        width: 30em;
+        width: 33%;
         margin-top: -10%;
         margin-left: -5em;
       }
     }
   }
 }
+
+
+@media (max-width: 1450px) {
+  body {
+    .slider {
+      .slide2 {
+        .parallax2{
+          .layer1{
+            margin-top: 5%;
+            margin-left: -2em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1285px) {
+  body {
+    .slider {
+      .slide2 {
+        .parallax2{
+          .layer1{
+            margin-top: -10%;
+            margin-left: -5%;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
 @media (max-width: 800px) {
   body {
     .slider {
@@ -129,26 +163,23 @@
             font-size: 12px;
           }
         }
-
-        .engine {
-          width: 42em;
-        }
-
-        .thermo {
-          display: none;
-        }
-        .block2
-        {
+        .thermo,
+        .block2,
+        .rocketcontainer,
+        .waves,
+        .grabbutton,
+        .progressbar {
           display: none;
         }
       }
     }
   }
 }
+
 @media (max-width: 600px) {
   body {
     .slider {
-      .slide2 {
+      .slide2 {        
         .maintext {
           width: 80%;
           height: auto;

@@ -52,17 +52,40 @@
       .parallax4{
         .layer1{
           width: 30em;
-          margin-top: 25%;
-          margin-left: 65em;
+          margin-top: 20%;
+          margin-left: 60em;
         }
       }
     }
   }
 
+  // @media (max-width: 1285px) {
+  //   body {
+  //     .slider {
+  //       .slide6 {
+  //         .parallax4{
+  //           .layer1{
+  //             margin-bottom: 10%;
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+  
+  
+  
   @media (max-width: 800px) {
     body {
       .slider {
-        .slide6{
+        .slide6 {
+          .parallax4{
+            .layer1{
+              margin-top: 60%;
+              margin-left: 40em;
+              width: 30%;
+            }
+          }
           .maintext {
             h1 {
               margin-top: 2em;
@@ -72,15 +95,17 @@
               font-size: 12px;
             }
           }
-          .astronautpic {
-            height: 270px;
-            width: auto;
+          .robot {
+            display: none;
+          }
+          .robot_body {
+            display: none;
           }
         }
       }
     }
   }
-
+  
   @media (max-width: 600px) {
     body {
       .slider {
@@ -91,10 +116,33 @@
             top: 5%;
             left: 10%;
           }
-          .rocketcontainer {
-            display: none;
+          a {
+            font-size: 10px;
+          }
+          .parallax4{
+            .layer1{
+              margin-top: 70%;
+              margin-left: 27em;
+              width: 50%;
+            }
           }
         }
       }
     }
   }
+  
+  @media (max-width: 400px) {
+    body {
+      .slider {
+        .slide6 {
+          .parallax4{
+            .layer1{
+              margin-top: 120%;
+              margin-left: 20em;
+            }
+          }
+        }
+      }
+    }
+  }
+  

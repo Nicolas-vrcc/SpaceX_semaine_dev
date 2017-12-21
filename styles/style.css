@@ -66,6 +66,7 @@ body {
     display: block;
     width: 100%;
     height: calc(100% + 1px);
+    display: none;
     z-index: 8;
     overflow: hidden;
     background-image: url(../images/bck.png);
@@ -367,7 +368,7 @@ body .slider .slide1 {
     margin-top: 10%;
     margin-left: -2em; }
 
-@media (max-width: 1450px) and (min-width: 1285px) {
+@media (max-width: 1450px) {
   body .slider .slide1 .parallax1 .layer1 {
     margin-top: 5%;
     margin-left: -2em; } }
@@ -812,25 +813,38 @@ body .slider .slide1 {
       line-height: 1.8em; }
   .slider .slide6 .parallax4 .layer1 {
     width: 30em;
-    margin-top: 25%;
-    margin-left: 65em; }
+    margin-top: 20%;
+    margin-left: 60em; }
 
 @media (max-width: 800px) {
+  body .slider .slide6 .parallax4 .layer1 {
+    margin-top: 60%;
+    margin-left: 40em;
+    width: 30%; }
   body .slider .slide6 .maintext h1 {
     margin-top: 2em;
     margin-bottom: 2em; }
   body .slider .slide6 .maintext p {
     font-size: 12px; }
-  body .slider .slide6 .astronautpic {
-    height: 270px;
-    width: auto; } }
+  body .slider .slide6 .robot {
+    display: none; }
+  body .slider .slide6 .robot_body {
+    display: none; } }
 @media (max-width: 600px) {
   body .slider .slide6 .maintext {
     width: 80%;
     height: auto;
     top: 5%;
     left: 10%; }
-  body .slider .slide6 .rocketcontainer {
-    display: none; } }
+  body .slider .slide6 a {
+    font-size: 10px; }
+  body .slider .slide6 .parallax4 .layer1 {
+    margin-top: 70%;
+    margin-left: 27em;
+    width: 50%; } }
+@media (max-width: 400px) {
+  body .slider .slide6 .parallax4 .layer1 {
+    margin-top: 120%;
+    margin-left: 20em; } }
 
 /*# sourceMappingURL=style.css.map */

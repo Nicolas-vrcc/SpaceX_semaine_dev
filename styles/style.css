@@ -320,6 +320,9 @@ body .slider {
     animation-fill-mode: forwards;
     animation-direction: reverse; }
 
+@media (max-width: 800px) {
+  .cursor {
+    display: none; } }
 body .slider .slide1 {
   display: block;
   z-index: 5; }
@@ -399,10 +402,10 @@ body .slider .slide1 {
     margin-top: 48%;
     margin-left: -2em; }
   body .slider .slide1 .maintext h1 {
-    margin-top: 2em;
-    margin-bottom: 2em; }
+    margin-top: 1.5em;
+    margin-bottom: 1em; }
   body .slider .slide1 .maintext p {
-    font-size: 12px; }
+    font-size: 14px; }
   body .slider .slide1 .rocketcontainer {
     display: none; }
   body .slider .slide1 .astronautpic {
@@ -524,9 +527,9 @@ body .slider .slide1 {
 @media (max-width: 800px) {
   body .slider .slide2 .maintext h1 {
     margin-top: 3em;
-    margin-bottom: 2em; }
+    margin-bottom: 1em; }
   body .slider .slide2 .maintext p {
-    font-size: 12px; }
+    font-size: 14px; }
   body .slider .slide2 .maintext .block {
     display: none; }
   body .slider .slide2 .thermo,
@@ -655,9 +658,9 @@ body .slider .slide1 {
 @media (max-width: 800px) {
   body .slider .slide3 .maintext h1 {
     margin-top: 2em;
-    margin-bottom: 2em; }
+    margin-bottom: 1em; }
   body .slider .slide3 .maintext p {
-    font-size: 12px; } }
+    font-size: 14px; } }
 @media (max-width: 600px) {
   body .slider .slide3 .maintext {
     width: 80%;
@@ -759,9 +762,9 @@ body .slider .slide1 {
     margin-left: 0; }
   body .slider .slide4 .maintext h1 {
     margin-top: 2em;
-    margin-bottom: 2em; }
+    margin-bottom: 1em; }
   body .slider .slide4 .maintext p {
-    font-size: 12px; }
+    font-size: 14px; }
   body .slider .slide4 .scroll-down-container {
     display: none; }
   body .slider .slide4 .bfr {
@@ -817,13 +820,17 @@ body .slider .slide1 {
 @media (max-width: 800px) {
   body .slider .slide5 .maintext h1 {
     margin-top: 2em;
-    margin-bottom: 2em; }
+    margin-bottom: 1em; }
   body .slider .slide5 .maintext p {
-    font-size: 12px; }
+    font-size: 14px; }
   body .slider .slide5 img {
     width: 78%; }
   body .slider .slide5 .block {
-    display: none; } }
+    display: none; }
+  body .slider .slide5 .marsplanet3d {
+    position: absolute;
+    top: -30px;
+    left: 50%; } }
 @media (max-width: 600px) {
   body .slider .slide5 .maintext {
     width: 80%;
@@ -887,9 +894,9 @@ body .slider .slide1 {
     width: 30%; }
   body .slider .slide6 .maintext h1 {
     margin-top: 2em;
-    margin-bottom: 2em; }
+    margin-bottom: 1em; }
   body .slider .slide6 .maintext p {
-    font-size: 12px; }
+    font-size: 14px; }
   body .slider .slide6 .robot {
     display: none; }
   body .slider .slide6 .robot_body {

@@ -369,7 +369,7 @@ window.addEventListener('mousewheel', (e) => {
       // Moving down the text
       for (const textMission of textMissions) {
         console.log(textpos)
-        if (textpos <= 400) {
+        if (textpos <= 500) {
           textpos += 20
           textMission.style.transform = `translateY(${textpos}px)`
           // Second text appearing if the first is down

@@ -529,8 +529,6 @@ body .slider .slide1 {
     width: 45%; } }
 .slider .slide3 {
   z-index: 2; }
-  .slider .slide3 .links-box {
-    top: 70%; }
   .slider .slide3 .dragon {
     width: 17em;
     position: absolute;
@@ -592,6 +590,7 @@ body .slider .slide1 {
       font-size: 2em;
       color: #4F91F3; }
     .slider .slide3 .maintext p {
+      margin-top: 2em;
       font-family: NexaLight;
       margin-bottom: 1em;
       color: grey;
@@ -637,7 +636,9 @@ body .slider .slide1 {
     width: 80%;
     height: auto;
     top: 5%;
-    left: 10%; } }
+    left: 10%; }
+  body .slider .slide3 .links-box {
+    top: 90%; } }
 .slider .slide4 {
   z-index: 3; }
   .slider .slide4 .maintext {

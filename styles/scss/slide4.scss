@@ -103,10 +103,22 @@
 }
 }
 
+@media (max-width: 1000px) {
+  .shadow{
+    display: none;
+  }
+}
+
 @media (max-width: 800px) {
   body {
     .slider {
       .slide4 {
+        .parallax3{
+          .layer1{
+            margin-top: 60%;
+            margin-left: 0;
+          }
+        }
         .maintext {
           h1 {
             margin-top: 2em;
@@ -159,6 +171,11 @@
         }
         img {
           width: 75%;
+        }
+        .parallax3{
+          .layer1{
+            margin-top: 110%;
+          }
         }
       }
     }

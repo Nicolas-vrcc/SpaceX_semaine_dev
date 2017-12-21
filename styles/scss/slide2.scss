@@ -162,6 +162,9 @@
           p {
             font-size: 12px;
           }
+          .block{
+            display: none;
+          }
         }
         .thermo,
         .block2,
@@ -185,6 +188,23 @@
           height: auto;
           top: 5%;
           left: 10%;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 400px) {
+  body {
+    .slider {
+      .slide2 {
+        .parallax2{
+          .layer1{
+            margin-top: -10%;
+            margin-left: -5%;
+            width: 45%;
+          }
         }
       }
     }

@@ -823,7 +823,11 @@ body .slider .slide1 {
   body .slider .slide5 img {
     width: 78%; }
   body .slider .slide5 .block {
-    display: none; } }
+    display: none; }
+  body .slider .slide5 .marsplanet3d {
+    position: absolute;
+    top: -30px;
+    left: 50%; } }
 @media (max-width: 600px) {
   body .slider .slide5 .maintext {
     width: 80%;

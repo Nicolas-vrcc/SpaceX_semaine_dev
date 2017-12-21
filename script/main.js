@@ -213,7 +213,7 @@ const elementDrag = (e) => {
   if (rocketBottom.offsetTop - pos2 < 250) {
     rocketInside.style.opacity = 0.8
     rocketBottom.style.opacity = 0
-    rocketTop.style.opacity = 0.8
+    rocketTop.style.opacity = 0
     animationOn = false
   }
 }

@@ -52,8 +52,7 @@
       .parallax4{
         .layer1{
           width: 30em;
-          margin-top: 20%;
-          margin-left: 60em;
+          margin-top: 25%;
         }
       }
     }
@@ -73,7 +72,20 @@
   //   }
   // }
   
-  
+  @media (max-width: 1700px) {
+    body {
+      .slider {
+        .slide6 {
+          .parallax4{
+            .layer1{
+              margin-top: 33%;
+              margin-left: 65%;
+            }
+          }
+        }
+      }
+    }
+  }
   
   @media (max-width: 800px) {
     body {

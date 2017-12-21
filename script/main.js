@@ -86,54 +86,51 @@ allImg.forEach((img) => {
 
 // handle the cool cursor
 const $cursor = document.querySelector('.cursor')
+const $insideCursor = document.querySelector('.inside_cursor')
 let radius = 40
-let speedX = 4
-let speedY = 4
+let cursorX = 4
+let cursorY = 4
 const event = 0
 
-document.addEventListener('mousemove', (event) => {
-  const mouse = {
-    x: event.clientX,
-    y: event.clientY
-  }
+const mouse = {x: 0, y: 0}
 
-  speedX += (mouse.x - speedX) * 0.35
-  speedY += (mouse.y - speedY) * 0.35
-
-  $cursor.style.top = speedY - 15 + 'px'
-  $cursor.style.left = speedX - 15 + 'px'
-
-  if (mouse.x > 300 && mouse.x < 1000) {
-    $cursor.classList.add('mousedown')
-  } else {
-    $cursor.classList.remove('mousedown')
-  }
-  // $cursor.classList.add('mousemove')
-  // setTimeout(() => {
-  //     $cursor.classList.remove('mousemove')
-  // }, 1000)
+document.addEventListener('mousemove', (event) =>
+{
+    mouse.x = event.clientX - 15
+    mouse.y = event.clientY  - 15
 
 })
-$cursor.style.top = event.clientY + 20 + 'px'
-$cursor.style.left = event.clientX + 20 + 'px'
+
+const loop = () =>
+{
+    window.requestAnimationFrame(loop)
+
+    const newCursorX = cursorX + (mouse.x - cursorX) * 0.1
+    const newCursorY = cursorY + (mouse.y - cursorY) * 0.1
+
+    const distanceX = newCursorX - cursorX
+    const distanceY = newCursorY - cursorY
+
+    cursorX = newCursorX
+    cursorY = newCursorY
+
+    const scale = 1 + Math.hypot(distanceX, distanceY) / 15
+
+    $cursor.style.transform = `translateX(${cursorX}px) translateY(${cursorY}px) scale(${scale})`
+}
+loop()
 
 
-document.addEventListener('mousedown', (event) => {
-  const mouse = {
-    x: event.clientX,
-    y: event.clientY
-  }
-  if ($cursor.classList.contains('mousedown')) {
-    $cursor.classList.add('click')
-    setTimeout(() => {
-      $cursor.classList.remove('click')
-    }, 400)
-  } else {
-    $cursor.classList.add('click2')
-    setTimeout(() => {
-      $cursor.classList.remove('click2')
-    }, 400)
-  }
+document.addEventListener('mousedown', (event) =>
+{
+  $cursor.style.opacity = 0
+})
+document.addEventListener('mouseup', (event) =>
+{
+  setTimeout(() => 
+
+  $cursor.style.opacity = 1
+  , 300)
 })
 
 // event listeners

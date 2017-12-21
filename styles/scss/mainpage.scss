@@ -27,7 +27,6 @@ body {
     display: block;
     width: 100%; // Hack in order to get scroll event still working
     height: calc(100% + 1px);
-    display: none;
     z-index: 8;
     overflow: hidden;
     background-image: url(../images/bck.png);
@@ -98,6 +97,9 @@ body {
       color: white;
       text-align: center;
     }
+    .clickbtn {
+      display: none;
+    }
     .white-line {
       width: 2px;
       height: 50px;
@@ -127,6 +129,12 @@ body {
       }
       button {
         bottom: 60px;
+      }
+      .scrollbtn {
+        display: none;
+      }
+      .clickbtn {
+        display: block;
       }
     }
   }

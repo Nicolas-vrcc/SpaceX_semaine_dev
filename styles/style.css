@@ -69,7 +69,6 @@ body {
     display: block;
     width: 100%;
     height: calc(100% + 1px);
-    display: none;
     z-index: 8;
     overflow: hidden;
     background-image: url(../images/bck.png);
@@ -126,6 +125,8 @@ body {
       display: block;
       color: white;
       text-align: center; }
+    body .home .clickbtn {
+      display: none; }
     body .home .white-line {
       width: 2px;
       height: 50px;
@@ -147,7 +148,11 @@ body {
     body .home img {
       display: none; }
     body .home button {
-      bottom: 60px; } }
+      bottom: 60px; }
+    body .home .scrollbtn {
+      display: none; }
+    body .home .clickbtn {
+      display: block; } }
 @keyframes display {
   0% {
     opacity: 0;
@@ -320,6 +325,14 @@ body .slider .slide1 {
   z-index: 5; }
   body .slider .slide1 a:hover .cursor {
     transform: scale(3); }
+  body .slider .slide1 .backbtn {
+    position: absolute;
+    top: 2%;
+    left: 34%;
+    font-family: NexaLight;
+    color: lightgrey;
+    font-size: 12px;
+    display: none; }
   body .slider .slide1 .maintext {
     position: absolute;
     width: 500px;
@@ -375,11 +388,11 @@ body .slider .slide1 {
 
 @media (max-width: 1450px) {
   body .slider .slide1 .parallax1 .layer1 {
-    margin-top: 5%;
+    margin-top: 15%;
     margin-left: -2em; } }
 @media (max-width: 1285px) {
   body .slider .slide1 .parallax1 .layer1 {
-    margin-top: 10%;
+    margin-top: 22%;
     margin-left: -2em; } }
 @media (max-width: 800px) {
   body .slider .slide1 .parallax1 .layer1 {
@@ -398,6 +411,8 @@ body .slider .slide1 {
   body .slider .slide1 .block {
     display: none; } }
 @media (max-width: 600px) {
+  body .slider .slide1 .backbtn {
+    display: block; }
   body .slider .slide1 .maintext {
     width: 80%;
     height: auto;
@@ -618,6 +633,13 @@ body .slider .slide1 {
     top: 5% !important;
     right: 15% !important; }
 
+@media (max-width: 1685px) {
+  .dragon {
+    width: 19em;
+    margin-left: 7%; }
+
+  .falcon9 {
+    width: 5em; } }
 @media (max-width: 1000px) {
   .dragon,
   .button,

@@ -127,7 +127,7 @@ document.addEventListener('mousedown', (event) =>
 })
 document.addEventListener('mouseup', (event) =>
 {
-  setTimeout(() => 
+  setTimeout(() =>
 
   $cursor.style.opacity = 1
   , 300)
@@ -210,7 +210,7 @@ const elementDrag = (e) => {
   }
   if (rocketBottom.offsetTop - pos2 < 250) {
     rocketInside.style.opacity = 0.8
-    rocketBottom.style.opacity = 0.3
+    rocketBottom.style.opacity = 0
     rocketTop.style.opacity = 0.8
     animationOn = false
   }
@@ -390,7 +390,7 @@ document.addEventListener('keydown', (e) => {
           slides[i].classList.add('active')
           slideButtons[i].classList.add('clickedbtn')
           // transition background
-          if (i == 2 || i == 3) {
+          if (i == 3 || i == 4 || i == 5) {
             document.body.style.backgroundColor = 'black'
           } else {
             document.body.style.backgroundColor = '#F8F8F8'
@@ -416,7 +416,7 @@ document.addEventListener('keydown', (e) => {
           slides[i].classList.add('active')
           slideButtons[i].classList.add('clickedbtn')
           // transition background
-          if (i == 2 || i == 3) {
+          if (i == 3 || i == 4 || i == 5) {
             document.body.style.backgroundColor = 'black'
           } else {
             document.body.style.backgroundColor = '#F8F8F8'

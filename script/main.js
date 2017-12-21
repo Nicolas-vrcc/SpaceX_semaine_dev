@@ -4,6 +4,7 @@ const allImg = document.querySelectorAll('img');
 const homePage = document.querySelector('.home')
 const startBtn = homePage.querySelector('.scrollbtn')
 const clickBtn = homePage.querySelector('.clickbtn')
+const loader = document.querySelector('.loader')
 //slider
 const mainSlider = document.querySelector('.slider')
 const slides = document.querySelectorAll('.slide')
@@ -37,6 +38,10 @@ const rocketLeg1 = slide4.querySelector('.leg1')
 const rocketLeg2 = slide4.querySelector('.leg2')
 const textMissions = slide4.querySelectorAll('.text-missions')
 const textMissions2 = slide4.querySelectorAll('.text-missions2')
+
+setTimeout(() => {
+  loader.style.display = "none"
+}, (3000));
 
 // Buttons on Slide3 that allows the hidden text to appear on click
 button1Slide3.addEventListener('click', (event) => {

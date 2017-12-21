@@ -2,10 +2,10 @@
   .slide3 {
     z-index: 2;
     .dragon {
-      width: 17em;
-      position: absolute;
-      top: 15%;
-      left: 3%;
+      width: 17em ;
+      position: absolute !important;
+      top: 15% !important;
+      left: 3% !important;
     }
     .button {
       width: 2em;
@@ -13,7 +13,7 @@
       position: absolute;
       top: 35%;
       background: $blue;
-      box-shadow: 0 0 20px $blue; 
+      box-shadow: 0 0 20px $blue;
       border-radius: 2em;
       z-index: 3;
       animation: buttonmove 2.5s infinite;
@@ -22,7 +22,7 @@
       {
         border-radius: 50%;
         width: 3em;
-        height:3em; 
+        height:3em;
         border: 0.5px solid $blue;
         border-top:0;
         border-right:0;
@@ -99,9 +99,9 @@
     }
     .falcon9 {
       width: 2.5em;
-      position: absolute;
-      top: 5%;
-      right: 15%;
+      position: absolute !important;
+      top: 5% !important;
+      right: 15% !important;
     }
   }
 }
@@ -162,5 +162,3 @@
     }
   }
 }
-
-

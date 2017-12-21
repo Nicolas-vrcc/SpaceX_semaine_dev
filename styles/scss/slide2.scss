@@ -23,6 +23,16 @@
         line-height: 1.8em;
       }
     }
+    .dragit {
+      position: absolute;
+      top: 67%;
+      left: 74%;
+      width: 50px;
+      height: auto;
+      color: grey;
+      font-family: NexaLight;
+      font-size: 12px;
+    }
     .waves
     {
       width: 42px;
@@ -171,7 +181,8 @@
         .rocketcontainer,
         .waves,
         .grabbutton,
-        .progressbar {
+        .progressbar,
+        .dragit {
           display: none;
         }
       }

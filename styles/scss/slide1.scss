@@ -34,13 +34,23 @@ body {
           color: grey;
           line-height: 1.8em;
         }
+      }  
+      .dragit {
+        position: absolute;
+        top: 67%;
+        left: 88%;
+        width: 50px;
+        height: auto;
+        color: grey;
+        font-family: NexaLight;
+        font-size: 12px;
       }
       .astronautpic {
         height: auto;
         width: 30%;
         position: absolute;
         bottom: -5px;
-      }
+      }    
       .rocketcontainer {
         position: absolute;
         width: 20%;
@@ -137,7 +147,8 @@ body {
             font-size: 14px;
           }
         }
-        .rocketcontainer {
+        .rocketcontainer,
+        .dragit {
           display: none;
         }
         .astronautpic {

@@ -381,6 +381,15 @@ body .slider .slide1 {
       margin-bottom: 1em;
       color: grey;
       line-height: 1.8em; }
+  body .slider .slide1 .dragit {
+    position: absolute;
+    top: 67%;
+    left: 88%;
+    width: 50px;
+    height: auto;
+    color: grey;
+    font-family: NexaLight;
+    font-size: 12px; }
   body .slider .slide1 .astronautpic {
     height: auto;
     width: 30%;
@@ -435,7 +444,8 @@ body .slider .slide1 {
     margin-bottom: 1em; }
   body .slider .slide1 .maintext p {
     font-size: 14px; }
-  body .slider .slide1 .rocketcontainer {
+  body .slider .slide1 .rocketcontainer,
+  body .slider .slide1 .dragit {
     display: none; }
   body .slider .slide1 .astronautpic {
     height: 270px;
@@ -477,6 +487,15 @@ body .slider .slide1 {
       margin-bottom: 1em;
       color: grey;
       line-height: 1.8em; }
+  .slider .slide2 .dragit {
+    position: absolute;
+    top: 67%;
+    left: 74%;
+    width: 50px;
+    height: auto;
+    color: grey;
+    font-family: NexaLight;
+    font-size: 12px; }
   .slider .slide2 .waves {
     width: 42px;
     height: 42px;
@@ -566,7 +585,8 @@ body .slider .slide1 {
   body .slider .slide2 .rocketcontainer,
   body .slider .slide2 .waves,
   body .slider .slide2 .grabbutton,
-  body .slider .slide2 .progressbar {
+  body .slider .slide2 .progressbar,
+  body .slider .slide2 .dragit {
     display: none; } }
 @media (max-width: 600px) {
   body .slider .slide2 .maintext {

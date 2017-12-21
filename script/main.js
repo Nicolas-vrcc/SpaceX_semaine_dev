@@ -155,6 +155,7 @@ backBtn.addEventListener('click', (e) => {
   homePage.classList.remove('homepagegone')
 })
 
+
 // display and hide homepage on mousewheel up or down
 window.addEventListener('mousewheel', (e) => {
   if (slides[0].classList.contains('active')) {

@@ -126,6 +126,8 @@ body {
       display: block;
       color: white;
       text-align: center; }
+    body .home .clickbtn {
+      display: none; }
     body .home .white-line {
       width: 2px;
       height: 50px;
@@ -147,7 +149,11 @@ body {
     body .home img {
       display: none; }
     body .home button {
-      bottom: 60px; } }
+      bottom: 60px; }
+    body .home .scrollbtn {
+      display: none; }
+    body .home .clickbtn {
+      display: block; } }
 @keyframes display {
   0% {
     opacity: 0;
@@ -320,6 +326,14 @@ body .slider .slide1 {
   z-index: 5; }
   body .slider .slide1 a:hover .cursor {
     transform: scale(3); }
+  body .slider .slide1 .backbtn {
+    position: absolute;
+    top: 2%;
+    left: 34%;
+    font-family: NexaLight;
+    color: lightgrey;
+    font-size: 12px;
+    display: none; }
   body .slider .slide1 .maintext {
     position: absolute;
     width: 500px;
@@ -398,6 +412,8 @@ body .slider .slide1 {
   body .slider .slide1 .block {
     display: none; } }
 @media (max-width: 600px) {
+  body .slider .slide1 .backbtn {
+    display: block; }
   body .slider .slide1 .maintext {
     width: 80%;
     height: auto;

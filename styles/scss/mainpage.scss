@@ -98,6 +98,9 @@ body {
       color: white;
       text-align: center;
     }
+    .clickbtn {
+      display: none;
+    }
     .white-line {
       width: 2px;
       height: 50px;
@@ -127,6 +130,12 @@ body {
       }
       button {
         bottom: 60px;
+      }
+      .scrollbtn {
+        display: none;
+      }
+      .clickbtn {
+        display: block;
       }
     }
   }

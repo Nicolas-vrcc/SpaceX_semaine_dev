@@ -2,7 +2,8 @@
 const allImg = document.querySelectorAll('img');
 //homepage
 const homePage = document.querySelector('.home')
-const startBtn = homePage.querySelector('.startbtn')
+const startBtn = homePage.querySelector('.scrollbtn')
+const clickBtn = homePage.querySelector('.clickbtn')
 //slider
 const mainSlider = document.querySelector('.slider')
 const slides = document.querySelectorAll('.slide')
@@ -12,6 +13,7 @@ const textHover = document.querySelectorAll('.texthover')
 const rocketTop = document.querySelector('.rockettop');
 const rocketBottom = document.querySelector('.rocketbottom')
 const rocketInside = document.querySelector('.rocketthrough')
+const backBtn = document.querySelector('.backbtn')
 //slide2
 const buttonSlide2 = document.querySelector('.grabbutton')
 const loadingBar = document.querySelector('.progressbar')
@@ -142,11 +144,16 @@ document.addEventListener('mouseup', (event) =>
 
 // event listeners
 startBtn.addEventListener('click', (e) => {
-  homePage.style.opacity = 0
-  // wait for transition end before setting display none
-  homePage.addEventListener("transitionend", function (event) {
-    homePage.style.display = 'none'
-  })
+  homePage.classList.add('homepagegone')
+})
+// event listeners
+clickBtn.addEventListener('click', (e) => {
+  homePage.classList.add('homepagegone')
+})
+// event listeners
+backBtn.addEventListener('click', (e) => {
+  console.log('click')
+  homePage.classList.remove('homepagegone')
 })
 
 // display and hide homepage on mousewheel up or down

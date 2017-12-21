@@ -6,6 +6,15 @@ body {
     }
       display: block;
       z-index: 5;
+      .backbtn {
+        position: absolute;
+        top: 2%;
+        left: 34%;
+        font-family: NexaLight;
+        color: lightgrey;
+        font-size: 12px;
+        display: none;
+      }
       .maintext {
         position: absolute;
         width: 500px;
@@ -148,6 +157,9 @@ body {
   body {
     .slider {
       .slide1 {
+        .backbtn {
+          display: block;
+        }
         .maintext {
           width: 80%;
           height: auto;

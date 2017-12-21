@@ -392,7 +392,7 @@ body .slider .slide1 {
     margin-left: -2em; } }
 @media (max-width: 1285px) {
   body .slider .slide1 .parallax1 .layer1 {
-    margin-top: 22%;
+    margin-top: 18%;
     margin-left: -2em; } }
 @media (max-width: 800px) {
   body .slider .slide1 .parallax1 .layer1 {
@@ -746,9 +746,9 @@ body .slider .slide1 {
       opacity: 0.6;
       margin-left: 18%; }
   .slider .slide4 .parallax3 .layer1 {
-    width: 30em;
+    width: 50em;
     margin-top: 20%;
-    margin-left: -10%; }
+    margin-left: -20%; }
 
 @media (max-width: 1000px) {
   .shadow {
@@ -878,11 +878,11 @@ body .slider .slide1 {
 
 @media (max-width: 1700px) {
   body .slider .slide6 .parallax4 .layer1 {
-    margin-top: 33%;
-    margin-left: 65%; } }
+    margin-top: 31%;
+    margin-left: 75%; } }
 @media (max-width: 800px) {
   body .slider .slide6 .parallax4 .layer1 {
-    margin-top: 60%;
+    margin-top: 55%;
     margin-left: 40em;
     width: 30%; }
   body .slider .slide6 .maintext h1 {

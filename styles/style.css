@@ -66,7 +66,6 @@ body {
     display: block;
     width: 100%;
     height: calc(100% + 1px);
-    display: none;
     z-index: 8;
     overflow: hidden;
     background-image: url(../images/bck.png);
@@ -173,6 +172,8 @@ body .slider {
       right: 0;
       text-align: right;
       margin-top: 5em; }
+    body .slider .slide .links-box:hover {
+      cursor: pointer; }
     body .slider .slide .links-box:hover .block {
       animation: translatebox 2s ease-in;
       transform-origin: right; }
@@ -458,6 +459,8 @@ body .slider .slide1 {
     left: 10%; } }
 .slider .slide3 {
   z-index: 2; }
+  .slider .slide3 .links-box {
+    top: 70%; }
   .slider .slide3 .dragon {
     width: 17em;
     position: absolute;
@@ -727,7 +730,7 @@ body .slider .slide1 {
   .slider .slide6 .robot {
     position: absolute;
     width: 20%;
-    bottom: 38%;
+    bottom: 35%;
     left: -1%;
     animation: headrotate 5s infinite; }
 @keyframes headrotate {

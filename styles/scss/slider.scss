@@ -39,6 +39,11 @@ body{
       margin-top: 5em;
     }
 
+    .links-box:hover
+    {
+      cursor: pointer;
+    }
+    
     .links-box:hover .block
     {
       animation: translatebox 2s ease-in;

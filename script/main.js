@@ -390,7 +390,7 @@ document.addEventListener('keydown', (e) => {
           slides[i].classList.add('active')
           slideButtons[i].classList.add('clickedbtn')
           // transition background
-          if (i == 2 || i == 3) {
+          if (i == 3 || i == 4 || i == 5) {
             document.body.style.backgroundColor = 'black'
           } else {
             document.body.style.backgroundColor = '#F8F8F8'
@@ -416,7 +416,7 @@ document.addEventListener('keydown', (e) => {
           slides[i].classList.add('active')
           slideButtons[i].classList.add('clickedbtn')
           // transition background
-          if (i == 2 || i == 3) {
+          if (i == 3 || i == 4 || i == 5) {
             document.body.style.backgroundColor = 'black'
           } else {
             document.body.style.backgroundColor = '#F8F8F8'

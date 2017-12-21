@@ -15,6 +15,8 @@ const rocketInside = document.querySelector('.rocketthrough')
 //slide2
 const buttonSlide2 = document.querySelector('.grabbutton')
 const loadingBar = document.querySelector('.progressbar')
+const wave1 = document.querySelector('.wave1')
+const wave2 = document.querySelector('.wave2')
 //slide3
 const slide3 = document.querySelector('.slide3')
 const button1Slide3 = slide3.querySelector('.button1')
@@ -256,15 +258,17 @@ const elementDragSlide2 = (e) => {
   if (buttonSlide2.offsetTop - pos2 > 200 && buttonSlide2.offsetTop - pos2 < 510 && animation2On) {
     buttonSlide2.style.top = (buttonSlide2.offsetTop - pos2) + "px"
     let clearPosition = buttonSlide2.offsetTop - pos2
-    let transforBar = (1 - ((clearPosition - 200) / (500 - 200))) * 10
-    if (transforBar > 10) {
-      transforBar = 10
+    let transforBar = (1 - ((clearPosition - 200) / (500 - 200))) * 7
+    if (transforBar > 7) {
+      transforBar = 7
     }
-    if (transforBar < 0) {
-      transforBar = 0
+    if (transforBar < 1) {
+      transforBar = 1
     }
     console.log('position : ' + clearPosition, 'clear value: ' + transforBar)
     loadingBar.style.transform = `rotate(8deg) scaleY(${transforBar})`
+    wave1.style.transform = `rotate(8deg) translateY(${transforBar}`
+    wave2.style.transform = `rotate(8deg) translateY(${transforBar}`
   }
 }
 

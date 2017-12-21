@@ -39,9 +39,10 @@ const rocketLeg2 = slide4.querySelector('.leg2')
 const textMissions = slide4.querySelectorAll('.text-missions')
 const textMissions2 = slide4.querySelectorAll('.text-missions2')
 
+// Loader
 setTimeout(() => {
   loader.style.display = "none"
-}, (3000));
+}, (10000))
 
 // Buttons on Slide3 that allows the hidden text to appear on click
 button1Slide3.addEventListener('click', (event) => {

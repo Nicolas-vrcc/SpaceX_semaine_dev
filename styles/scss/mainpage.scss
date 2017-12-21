@@ -7,13 +7,53 @@
   }
 }
 
-body {
+// @keyframes loader {
+//   0%{
+//     display: block;
+//     filter: blur(40px);
+//   }
+//   100%{
+//     display: none;
+//     filter: blur(0px);
+//   }
+// }
+
+body {  
+  .hidden {
+    animation: loader 0.8s ease;
+  }
   .loader {
     position: relative;
     width: 100%;
     height: 100%;
-    background: white;
+    background: black;
     display: block;
+    .first {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+    }
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 10px;
+      height: 10px;
+      background: #4F91F3;
+      border-radius: 50%;
+      display: block;
+      margin-left: 30px;
+      box-shadow: 30px 30px 20px 2px #4F91F3;
+      animation: rotate 10s linear infinite;
+    }
+    @keyframes rotate {
+      from {
+        transform: rotateZ(360deg);
+      }
+      to {
+        transform: rotateZ(0deg);
+      }
+    }
   }
   overflow: hidden;
   position: absolute;
@@ -41,16 +81,12 @@ body {
     background-repeat: no-repeat;
     background-clip: border-box;
     transition: transform 1s ease, opacity 1s ease;
-
-    .link_homepage
-    {
+    .link_homepage {
       text-decoration: none;
     }
-    .link_logo
-    {
+    .link_logo {
       cursor: pointer;
     }
-    
     h1 {
       font-family: NexaHeavy;
       height: auto;
@@ -117,6 +153,8 @@ body {
     }
   }
 }
+
+
 /* Responsive iphone7 */
 
 @media (max-width: 600px) {

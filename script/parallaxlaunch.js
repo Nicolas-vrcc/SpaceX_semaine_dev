@@ -1,0 +1,8 @@
+var parallax1 = document.querySelector('.parallax1')
+var parallaxInstance = new Parallax(parallax1)
+var parallax2 = document.querySelector('.parallax2')
+var parallaxInstance = new Parallax(parallax2)
+var parallax3 = document.querySelector('.parallax3')
+var parallaxInstance = new Parallax(parallax3)
+var parallax4 = document.querySelector('.parallax4')
+var parallaxInstance = new Parallax(parallax4)

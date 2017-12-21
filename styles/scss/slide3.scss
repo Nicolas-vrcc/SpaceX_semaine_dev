@@ -85,15 +85,19 @@
       }
       .hidden-text1.hidden {
         opacity: 0;
+        transition: opacity 0.8s ease;
       }
       .hidden-text2.hidden {
         opacity: 0;
+        transition: opacity 0.8s ease;
       }
       .hidden-text1 {
         opacity: 1;
+        transition: opacity 0.8s ease;
       }
       .hidden-text2 {
         opacity: 1;
+        transition: opacity 0.8s ease;
       }
     }
     .falcon9 {

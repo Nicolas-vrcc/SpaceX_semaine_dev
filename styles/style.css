@@ -554,13 +554,17 @@ body .slider .slide1 {
       color: grey;
       line-height: 1.8em; }
     .slider .slide3 .maintext .hidden-text1.hidden {
-      opacity: 0; }
+      opacity: 0;
+      transition: opacity 0.8s ease; }
     .slider .slide3 .maintext .hidden-text2.hidden {
-      opacity: 0; }
+      opacity: 0;
+      transition: opacity 0.8s ease; }
     .slider .slide3 .maintext .hidden-text1 {
-      opacity: 1; }
+      opacity: 1;
+      transition: opacity 0.8s ease; }
     .slider .slide3 .maintext .hidden-text2 {
-      opacity: 1; }
+      opacity: 1;
+      transition: opacity 0.8s ease; }
   .slider .slide3 .falcon9 {
     width: 2.5em;
     position: absolute;

@@ -69,7 +69,6 @@ body {
     display: block;
     width: 100%;
     height: calc(100% + 1px);
-    display: none;
     z-index: 8;
     overflow: hidden;
     background-image: url(../images/bck.png);

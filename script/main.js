@@ -152,7 +152,6 @@ clickBtn.addEventListener('click', (e) => {
 })
 // event listeners
 backBtn.addEventListener('click', (e) => {
-  console.log('click')
   homePage.classList.remove('homepagegone')
 })
 

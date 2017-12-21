@@ -127,7 +127,7 @@ document.addEventListener('mousedown', (event) =>
 })
 document.addEventListener('mouseup', (event) =>
 {
-  setTimeout(() => 
+  setTimeout(() =>
 
   $cursor.style.opacity = 1
   , 300)
@@ -210,7 +210,7 @@ const elementDrag = (e) => {
   }
   if (rocketBottom.offsetTop - pos2 < 250) {
     rocketInside.style.opacity = 0.8
-    rocketBottom.style.opacity = 0.3
+    rocketBottom.style.opacity = 0
     rocketTop.style.opacity = 0.8
     animationOn = false
   }

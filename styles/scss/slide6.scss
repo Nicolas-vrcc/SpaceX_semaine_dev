@@ -33,7 +33,7 @@
         position: absolute;
         width: 500px;
         height: 50%;
-        top: 20%;
+        top: 10%;
         left: calc(50% - 250px);
         h1 {
           font-family: NexaHeavy;
@@ -100,6 +100,7 @@
           }
           .maintext {
             h1 {
+              margin-top: 1%;
               margin-bottom: 1em;
             }
             p {

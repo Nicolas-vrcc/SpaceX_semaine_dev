@@ -1,5 +1,5 @@
 // get DOM elements
-const allImg = document.querySelectorAll('img');
+const allImg = document.querySelectorAll('img')
 //homepage
 const homePage = document.querySelector('.home')
 const startBtn = homePage.querySelector('.scrollbtn')
@@ -11,7 +11,7 @@ const slides = document.querySelectorAll('.slide')
 const slideButtons = document.querySelectorAll('.circle')
 const textHover = document.querySelectorAll('.texthover')
 //slide1
-const rocketTop = document.querySelector('.rockettop');
+const rocketTop = document.querySelector('.rockettop')
 const rocketBottom = document.querySelector('.rocketbottom')
 const rocketInside = document.querySelector('.rocketthrough')
 const backBtn = document.querySelector('.backbtn')
@@ -42,14 +42,14 @@ const textMissions2 = slide4.querySelectorAll('.text-missions2')
 // Loader
 setTimeout(() => {
   loader.style.opacity = 0
-  setTimeout(() =>{
+  setTimeout(() => {
     loader.style.display = 'none'
   }, (800))
 }, (10000))
 
 // Buttons on Slide3 that allows the hidden text to appear on click
 button1Slide3.addEventListener('click', (event) => {
-  if(hiddenText1.classList.contains('hidden')) {
+  if (hiddenText1.classList.contains('hidden')) {
     hiddenText1.classList.remove('hidden')
   } else {
     hiddenText1.classList.add('hidden')
@@ -57,7 +57,7 @@ button1Slide3.addEventListener('click', (event) => {
 })
 
 button2Slide3.addEventListener('click', (event) => {
-  if(hiddenText2.classList.contains('hidden')) {
+  if (hiddenText2.classList.contains('hidden')) {
     hiddenText2.classList.remove('hidden')
   } else {
     hiddenText2.classList.add('hidden')
@@ -88,11 +88,11 @@ if (window.innerWidth >= 600) {
   }
 }
 
-console.log(buttonSlide2);
-console.log(loadingBar);
+console.log(buttonSlide2)
+console.log(loadingBar)
 // disable image dragging
 allImg.forEach((img) => {
-  img.ondragstart = function () {
+  img.ondragstart = function() {
     return false
   }
 })
@@ -105,66 +105,61 @@ let cursorX = 4
 let cursorY = 4
 const event = 0
 
-const mouse = {x: 0, y: 0}
+const mouse = {
+  x: 0,
+  y: 0
+}
 
-document.addEventListener('mousemove', (event) =>
-{
-    mouse.x = event.clientX - 15
-    mouse.y = event.clientY  - 15
+document.addEventListener('mousemove', (event) => {
+  mouse.x = event.clientX - 15
+  mouse.y = event.clientY - 15
 
 })
 
-const loop = (event) =>
-{
-    window.requestAnimationFrame(loop)
+const loop = (event) => {
+  window.requestAnimationFrame(loop)
 
-    const newCursorX = cursorX + (mouse.x - cursorX) * 0.1
-    const newCursorY = cursorY + (mouse.y - cursorY) * 0.1
+  const newCursorX = cursorX + (mouse.x - cursorX) * 0.1
+  const newCursorY = cursorY + (mouse.y - cursorY) * 0.1
 
-    const distanceX = newCursorX - cursorX
-    const distanceY = newCursorY - cursorY
+  const distanceX = newCursorX - cursorX
+  const distanceY = newCursorY - cursorY
 
-    cursorX = newCursorX
-    cursorY = newCursorY
+  cursorX = newCursorX
+  cursorY = newCursorY
 
-    const scale = 1 + Math.hypot(distanceX, distanceY) / 15
+  const scale = 1 + Math.hypot(distanceX, distanceY) / 15
 
-    $cursor.style.transform = `translateX(${cursorX}px) translateY(${cursorY}px) scale(${scale})`
+  $cursor.style.transform = `translateX(${cursorX}px) translateY(${cursorY}px) scale(${scale})`
 }
 loop()
 
-// cool cursor 2 
+// cool cursor 2
 const $cursorPoint = document.querySelector('.cursor-fixed')
 let cursorPointX = 0
 let cursorPointY = 0
 
-let mousePointX = 0;
-let mousePointY = 0;
+let mousePointX = 0
+let mousePointY = 0
 
-document.addEventListener('mousemove', (event2) =>
-{
-    mousePointX = event2.clientX - 3
-    mousePointY = event2.clientY - 3
-    $cursorPoint.style.transform = `translateX(${mousePointX}px) translateY(${mousePointY}px)`
+document.addEventListener('mousemove', (event2) => {
+  mousePointX = event2.clientX - 3
+  mousePointY = event2.clientY - 3
+  $cursorPoint.style.transform = `translateX(${mousePointX}px) translateY(${mousePointY}px)`
 })
 
-
-document.addEventListener('mousedown', (event) =>
-{
+document.addEventListener('mousedown', (event) => {
   $cursor.style.width = '50px'
   $cursor.style.height = '50px'
   $cursor.style.transition = 'width 0.2s ease-in-out, height 0.2s ease-in-out'
 })
-document.addEventListener('mouseup', (event) =>
-{
+document.addEventListener('mouseup', (event) => {
   setTimeout(() => {
 
-  $cursor.style.width = '30px'
-  $cursor.style.height = '30px'
+    $cursor.style.width = '30px'
+    $cursor.style.height = '30px'
   }, 100)
 })
-
-
 
 // event listeners
 startBtn.addEventListener('click', (e) => {
@@ -178,7 +173,6 @@ clickBtn.addEventListener('click', (e) => {
 backBtn.addEventListener('click', (e) => {
   homePage.classList.remove('homepagegone')
 })
-
 
 // display and hide homepage on mousewheel up or down
 window.addEventListener('mousewheel', (e) => {
@@ -220,31 +214,31 @@ const dragElement = (elmnt) => {
   var pos1 = 0,
     pos2 = 0,
     pos3 = 0,
-    pos4 = 0;
+    pos4 = 0
   elmnt.onmousedown = dragMouseDown
 }
 
 const dragMouseDown = (e) => {
-  e = e || window.event;
+  e = e || window.event
   // get the mouse cursor position at startup:
-  // pos3 = e.clientX;
-  pos4 = e.clientY;
-  document.onmouseup = closeDragElement;
+  // pos3 = e.clientX
+  pos4 = e.clientY
+  document.onmouseup = closeDragElement
   // call a function whenever the cursor moves:
-  document.onmousemove = elementDrag;
+  document.onmousemove = elementDrag
 }
 let animationOn = true
 const elementDrag = (e) => {
-  e = e || window.event;
+  e = e || window.event
   // calculate the new cursor position:
-  // pos1 = pos3 - e.clientX;
-  pos2 = pos4 - e.clientY;
-  // pos3 = e.clientX;
-  pos4 = e.clientY;
+  // pos1 = pos3 - e.clientX
+  pos2 = pos4 - e.clientY
+  // pos3 = e.clientX
+  pos4 = e.clientY
   // set the element's new position:
   if (rocketBottom.offsetTop - pos2 > 250 && rocketBottom.offsetTop - pos2 < 380 && animationOn) {
-    rocketBottom.style.top = (rocketBottom.offsetTop - pos2) + "px";
-    // rocketBottom.style.left = (rocketBottom.offsetLeft - pos1) + "px";
+    rocketBottom.style.top = (rocketBottom.offsetTop - pos2) + "px"
+    // rocketBottom.style.left = (rocketBottom.offsetLeft - pos1) + "px"
   }
   if (rocketBottom.offsetTop - pos2 < 250) {
     rocketInside.style.opacity = 0.8
@@ -256,8 +250,8 @@ const elementDrag = (e) => {
 
 const closeDragElement = () => {
   /* stop moving when mouse button is released:*/
-  document.onmouseup = null;
-  document.onmousemove = null;
+  document.onmouseup = null
+  document.onmousemove = null
 }
 
 dragElement(rocketBottom)
@@ -265,31 +259,31 @@ dragElement(rocketBottom)
 // HANDLE DRAG fuel slide 2
 
 const dragElementSlide2 = (elmnt) => {
-  console.log(elmnt);
+  console.log(elmnt)
   var pos1 = 0,
     pos2 = 0,
     pos3 = 0,
-    pos4 = 0;
+    pos4 = 0
   elmnt.onmousedown = dragMouseDownSlide2
 }
 
 const dragMouseDownSlide2 = (e) => {
-  e = e || window.event;
+  e = e || window.event
   // get the mouse cursor position at startup:
-  // pos3 = e.clientX;
-  pos4 = e.clientY;
-  document.onmouseup = closeDragSlide2Element;
+  // pos3 = e.clientX
+  pos4 = e.clientY
+  document.onmouseup = closeDragSlide2Element
   // call a function whenever the cursor moves:
-  document.onmousemove = elementDragSlide2;
+  document.onmousemove = elementDragSlide2
 }
 let animation2On = true
 const elementDragSlide2 = (e) => {
-  e = e || window.event;
+  e = e || window.event
   // calculate the new cursor position:
-  // pos1 = pos3 - e.clientX;
-  pos2 = pos4 - e.clientY;
-  // pos3 = e.clientX;
-  pos4 = e.clientY;
+  // pos1 = pos3 - e.clientX
+  pos2 = pos4 - e.clientY
+  // pos3 = e.clientX
+  pos4 = e.clientY
   // set the element's new position:
   if (buttonSlide2.offsetTop - pos2 > 200 && buttonSlide2.offsetTop - pos2 < 510 && animation2On) {
     buttonSlide2.style.top = (buttonSlide2.offsetTop - pos2) + "px"
@@ -310,8 +304,8 @@ const elementDragSlide2 = (e) => {
 
 const closeDragSlide2Element = () => {
   /* stop moving when mouse button is released:*/
-  document.onmouseup = null;
-  document.onmousemove = null;
+  document.onmouseup = null
+  document.onmousemove = null
 }
 
 dragElementSlide2(buttonSlide2)

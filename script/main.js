@@ -114,7 +114,7 @@ document.addEventListener('mousemove', (event) =>
 
 })
 
-const loop = () =>
+const loop = (event) =>
 {
     window.requestAnimationFrame(loop)
 
@@ -132,6 +132,21 @@ const loop = () =>
     $cursor.style.transform = `translateX(${cursorX}px) translateY(${cursorY}px) scale(${scale})`
 }
 loop()
+
+// cool cursor 2 
+const $cursorPoint = document.querySelector('.cursor-fixed')
+let cursorPointX = 0
+let cursorPointY = 0
+
+let mousePointX = 0;
+let mousePointY = 0;
+
+document.addEventListener('mousemove', (event2) =>
+{
+    mousePointX = event2.clientX - 3
+    mousePointY = event2.clientY - 3
+    $cursorPoint.style.transform = `translateX(${mousePointX}px) translateY(${mousePointY}px)`
+})
 
 
 document.addEventListener('mousedown', (event) =>

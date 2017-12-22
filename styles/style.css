@@ -918,13 +918,14 @@ body .slider .slide1 {
     position: absolute;
     width: 500px;
     height: 50%;
-    top: 10%;
+    top: 20%;
     left: calc(50% - 250px); }
     .slider .slide6 .maintext h1 {
       font-family: NexaHeavy;
       font-size: 2em;
       color: #4F91F3;
-      margin-bottom: 1em; }
+      margin-bottom: 1em;
+      margin-top: 2em; }
     .slider .slide6 .maintext p {
       font-family: NexaLight;
       margin-bottom: 1em;

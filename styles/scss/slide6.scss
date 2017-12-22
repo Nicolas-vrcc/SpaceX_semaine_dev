@@ -33,13 +33,14 @@
         position: absolute;
         width: 500px;
         height: 50%;
-        top: 10%;
+        top: 20%;
         left: calc(50% - 250px);
         h1 {
           font-family: NexaHeavy;
           font-size: 2em;
           color: $blue;
           margin-bottom: 1em;
+          margin-top: 2em;
         }
         p {
           font-family: NexaLight;

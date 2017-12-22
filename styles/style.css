@@ -70,7 +70,7 @@ body {
     width: 100%;
     height: 100%;
     background: black;
-    transform: translate(0); }
+    transition: opacity 1s ease; }
     body .loader .first {
       position: absolute;
       top: 50%;

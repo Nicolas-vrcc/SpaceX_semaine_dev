@@ -41,7 +41,10 @@ const textMissions2 = slide4.querySelectorAll('.text-missions2')
 
 // Loader
 setTimeout(() => {
-  loader.style.display = "none"
+  loader.style.opacity = 0
+  setTimeout(() =>{
+    loader.style.display = 'none'
+  }, (800))
 }, (10000))
 
 // Buttons on Slide3 that allows the hidden text to appear on click
